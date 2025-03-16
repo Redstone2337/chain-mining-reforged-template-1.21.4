@@ -1,0 +1,16 @@
+{
+  "text.autoconfig.chainmining.title": "Chain Mining Reforged",
+  "text.autoconfig.chainmining.option.enabled": "Enable ChainMining",
+  "text.autoconfig.chainmining.option.requireKey": "Require Key",
+  "text.autoconfig.chainmining.option.maxChainCount": "Max Chain",
+  "text.autoconfig.chainmining.option.durabilityMultiplier": "Durability Multiplier",
+  "text.autoconfig.chainmining.option.allowedTools": "Allowed Tools",
+  "text.autoconfig.chainmining.option.useBlockWhitelist": "Use Block Whitelist",
+  "text.autoconfig.chainmining.option.defaultAllowedBlocks": "Default Allowed Blocks",
+  "text.autoconfig.chainmining.option.defaultDeniedBlocks": "Default Denied Blocks",
+  "text.autoconfig.chainmining.option.customAllowedBlocks": "Custom Allowed Blocks",
+  "text.autoconfig.chainmining.option.customDeniedBlocks": "Custom Denied Blocks",
+  "key.chainmining.chain_mining_reforged.name": "Chain Mining Key",
+  "category.chainmining.main.title": "Chain Mining Reforged",
+  "enchantment.cmr.fire_for_oneself": "Fire One Oneself"
+}

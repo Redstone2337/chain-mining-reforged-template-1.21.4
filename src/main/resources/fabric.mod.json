@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "cmr",
+	"version": "${version}",
+	"name": "Chain Mining Reforged",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cmr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.deepseek.v1.chainmining.ChainMiningReforged"
+		],
+		"client": [
+			"net.deepseek.v1.chainmining.ChainMiningReforgedClient"
+		],
+		"fabric-datagen": [
+			"net.deepseek.v1.chainmining.ChainMiningReforgedDataGenerator"
+		],
+		"modmenu": [
+			"net.deepseek.v1.chainmining.core.mod.ModMenu"
+		]
+	},
+	"mixins": [
+		"cmr.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "text.autoconfig.chainmining.title": "连锁重置",
+  "text.autoconfig.chainmining.option.enabled": "是否启用",
+  "text.autoconfig.chainmining.option.requireKey": "按键绑定",
+  "text.autoconfig.chainmining.option.maxChainCount": "最大连锁数量",
+  "text.autoconfig.chainmining.option.durabilityMultiplier": "耐久倍数",
+  "text.autoconfig.chainmining.option.allowedTools": "工具类型",
+  "text.autoconfig.chainmining.option.useBlockWhitelist": "方块过滤",
+  "text.autoconfig.chainmining.option.defaultAllowedBlocks": "方块白名单",
+  "text.autoconfig.chainmining.option.defaultDeniedBlocks": "方块黑名单",
+  "text.autoconfig.chainmining.option.customAllowedBlocks": "自定义方块白名单",
+  "text.autoconfig.chainmining.option.customDeniedBlocks": "自定义方块黑名单",
+  "key.chainmining.chain_mining_reforged.name": "开始连锁",
+  "category.chainmining.main.title": "连锁重置"
+}
