@@ -39,7 +39,8 @@ public class ModConfig implements ConfigData {
     public List<String> defaultAllowedBlocks = Arrays.asList(
             "minecraft:oak_log",
             "minecraft:stone",
-            "minecraft:dirt"
+            "minecraft:dirt",
+            "minecraft:coal_ore"
     );
 
     @Comment("默认禁止连锁的方块列表（黑名单模式）")
