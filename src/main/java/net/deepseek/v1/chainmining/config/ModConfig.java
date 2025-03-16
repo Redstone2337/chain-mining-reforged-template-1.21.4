@@ -46,7 +46,8 @@ public class ModConfig implements ConfigData {
     @Comment("默认禁止连锁的方块列表（黑名单模式）")
     public List<String> defaultDeniedBlocks = Arrays.asList(
             "minecraft:bedrock",
-            "minecraft:spawner"
+            "minecraft:spawner",
+            "minecraft:air"
     );
 
     @Comment("自定义允许连锁的方块列表（白名单模式）")
