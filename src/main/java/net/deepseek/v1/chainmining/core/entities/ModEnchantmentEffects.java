@@ -2,6 +2,7 @@ package net.deepseek.v1.chainmining.core.entities;
 
 import com.mojang.serialization.MapCodec;
 import net.deepseek.v1.chainmining.ChainMiningReforged;
+import net.deepseek.v1.chainmining.core.entities.effects.OnePush;
 import net.deepseek.v1.chainmining.core.entities.effects.TestEnchantmentsEffect;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.registry.Registries;
@@ -16,6 +17,7 @@ public class ModEnchantmentEffects {
 
     public static void register() {
         register("fire_foe_oneself", TestEnchantmentsEffect.CODEC);
+        register("one_push", OnePush.CODEC);
 
         ChainMiningReforged.LOGGER.info("附魔效果注册成功！");
     }

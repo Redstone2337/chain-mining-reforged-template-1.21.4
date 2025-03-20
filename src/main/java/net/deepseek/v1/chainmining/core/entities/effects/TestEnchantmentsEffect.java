@@ -24,7 +24,7 @@ public record TestEnchantmentsEffect(boolean isEnable) implements EnchantmentEnt
 
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity user, Vec3d pos) {
-        if (user instanceof LivingEntity && !(user instanceof PlayerEntity)) {
+        if (user instanceof LivingEntity && !(user instanceof PlayerEntity) && isEnable) {
 //            if (level == 1) {
 //                user.setFireTicks(200);
 //                user.setOnFireFor(200.0f);

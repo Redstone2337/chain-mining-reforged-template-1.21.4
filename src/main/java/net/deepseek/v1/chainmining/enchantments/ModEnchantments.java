@@ -1,6 +1,7 @@
 package net.deepseek.v1.chainmining.enchantments;
 
 import net.deepseek.v1.chainmining.ChainMiningReforged;
+import net.deepseek.v1.chainmining.core.entities.effects.OnePush;
 import net.deepseek.v1.chainmining.core.entities.effects.TestEnchantmentsEffect;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.minecraft.block.Block;
@@ -21,6 +22,7 @@ import net.minecraft.util.Identifier;
 public class ModEnchantments {
 
     public static final RegistryKey<Enchantment> FIRE_FOR_ONESELF = of("fire_for_oneself");
+    public static final RegistryKey<Enchantment> ONE_PUSH = of("one_push");
 
 
     public static void bootstrap(Registerable<Enchantment> registry) {
@@ -34,7 +36,7 @@ public class ModEnchantments {
                 Enchantment.builder(
                                 Enchantment.definition(
                                         registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                                        registryEntryLookup3.getOrThrow(ItemTags.AXES),
+                                        registryEntryLookup3.getOrThrow(ModItemTags.SWORD),
                                         10,
                                         3,
                                         Enchantment.leveledCost(1,10),
@@ -50,6 +52,27 @@ public class ModEnchantments {
                                 new TestEnchantmentsEffect(true)
                         )
 
+        );
+        register(registry,
+                ONE_PUSH,
+                Enchantment.builder(
+                        Enchantment.definition(
+                                registryEntryLookup3.getOrThrow(ModItemTags.SWORD),
+                                registryEntryLookup3.getOrThrow(ModItemTags.FUNCTION_LIST),
+                                10,
+                                1,
+                                Enchantment.leveledCost(1,5),
+                                Enchantment.leveledCost(2,4),
+                                5,
+                                AttributeModifierSlot.HAND
+                        )
+                )
+                        .addEffect(
+                                EnchantmentEffectComponentTypes.POST_ATTACK,
+                                EnchantmentEffectTarget.ATTACKER,
+                                EnchantmentEffectTarget.VICTIM,
+                                new OnePush(true)
+                        )
         );
     }
 

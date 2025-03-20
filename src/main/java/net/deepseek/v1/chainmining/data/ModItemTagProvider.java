@@ -21,6 +21,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModItemTags.FUNCTION_LIST)
                 .add(Items.DIAMOND_AXE)
                 .add(Items.NETHERITE_AXE)
-                .add(Items.GOLDEN_AXE);
+                .add(Items.GOLDEN_AXE)
+                .add(Items.IRON_AXE)
+                .add(Items.STONE_AXE)
+                .add(Items.WOODEN_AXE);
+        getOrCreateTagBuilder(ModItemTags.PICKAXE)
+                .add(Items.DIAMOND_PICKAXE)
+                .add(Items.NETHERITE_PICKAXE)
+                .add(Items.GOLDEN_PICKAXE)
+                .add(Items.IRON_PICKAXE)
+                .add(Items.STONE_PICKAXE)
+                .add(Items.WOODEN_PICKAXE);
+        getOrCreateTagBuilder(ModItemTags.SWORD)
+                .add(Items.DIAMOND_SWORD)
+                .add(Items.NETHERITE_SWORD)
+                .add(Items.GOLDEN_SWORD)
+                .add(Items.IRON_SWORD)
+                .add(Items.STONE_SWORD)
+                .add(Items.WOODEN_SWORD);
     }
 }
