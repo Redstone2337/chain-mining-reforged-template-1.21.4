@@ -1,6 +1,7 @@
 package net.deepseek.v1.chainmining;
 
 import net.deepseek.v1.chainmining.data.EnchantmentsGenerator;
+import net.deepseek.v1.chainmining.data.ModEnchantmentTagProvider;
 import net.deepseek.v1.chainmining.data.ModEnglishLanguageProvider;
 import net.deepseek.v1.chainmining.data.ModItemTagProvider;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
@@ -14,7 +15,8 @@ public class ChainMiningReforgedDataGenerator implements DataGeneratorEntrypoint
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(EnchantmentsGenerator::new);
-//		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModEnchantmentTagProvider::new);
 //		pack.addProvider(ModEnglishLanguageProvider::new);
 	}
 

@@ -18,7 +18,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModItemTags.FUNCTION_LIST)
-                .addTag(ItemTags.AXES)
-                .addTag(ItemTags.PICKAXES);
+                .addTag(ItemTags.WEAPON_ENCHANTABLE)
+                .addTag(ItemTags.SHARP_WEAPON_ENCHANTABLE);
     }
 }
