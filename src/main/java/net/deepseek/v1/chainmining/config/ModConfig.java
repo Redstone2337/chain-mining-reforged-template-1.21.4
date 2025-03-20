@@ -19,9 +19,9 @@ public class ModConfig implements ConfigData {
     @Comment("是否启用连锁采集")
     public boolean enabled = true;
 
-    @Comment("需要按住的键（空字符表示不需要按键）")
-    @ConfigEntry.Gui.Excluded // 从 GUI 中排除，使用自定义的按键绑定 UI
-    public String requireKey = getKeys();
+//    @Comment("需要按住的键（空字符表示不需要按键）")
+//    @ConfigEntry.Gui.Excluded // 从 GUI 中排除，使用自定义的按键绑定 UI
+//    public String requireKey = getKeys();
 
     @Comment("最大连锁数量（0为无限制）")
     public int maxChainCount = 10;

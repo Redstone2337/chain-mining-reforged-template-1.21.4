@@ -17,7 +17,6 @@ public class ModKeys {
                 GLFW.GLFW_KEY_GRAVE_ACCENT,
                 "category.chainmining.main.title"
         ));
-        config.setKeys(ChainMiningReforgedKey.getTranslationKey());
     }
 
     public static KeyBinding getChainMiningReforgedKey() {

@@ -2,6 +2,7 @@ package net.deepseek.v1.chainmining.event;
 
 import net.deepseek.v1.chainmining.ChainMiningReforged;
 import net.deepseek.v1.chainmining.config.ModConfig;
+import net.deepseek.v1.chainmining.core.keys.ModKeys;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -46,7 +47,7 @@ public class BlockBreakHandler {
         if (!isToolAllowed(toolStack, config.allowedTools)) return;
 
         // 检查按键
-        if (!isKeyPressed(player, config.requireKey)) return;
+        if (!ModKeys.getChainMiningReforgedKey().wasPressed()) return;
 
         // 检查方块是否允许
         if (!isBlockAllowed(state.getBlock(), config)) return;
