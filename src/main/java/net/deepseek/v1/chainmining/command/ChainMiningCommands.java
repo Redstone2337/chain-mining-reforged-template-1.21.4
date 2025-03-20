@@ -1,6 +1,7 @@
 package net.deepseek.v1.chainmining.command;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.mojang.brigadier.tree.LiteralCommandNode;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.deepseek.v1.chainmining.ChainMiningReforged;
 import net.deepseek.v1.chainmining.config.ModConfig;
