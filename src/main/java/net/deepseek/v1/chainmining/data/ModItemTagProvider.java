@@ -3,6 +3,7 @@ package net.deepseek.v1.chainmining.data;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -18,7 +19,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModItemTags.FUNCTION_LIST)
-                .addTag(ItemTags.WEAPON_ENCHANTABLE)
-                .addTag(ItemTags.SHARP_WEAPON_ENCHANTABLE);
+                .add(Items.DIAMOND_AXE)
+                .add(Items.NETHERITE_AXE)
+                .add(Items.GOLDEN_AXE);
     }
 }
