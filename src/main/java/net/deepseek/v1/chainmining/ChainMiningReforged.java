@@ -2,10 +2,7 @@ package net.deepseek.v1.chainmining;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
-import net.deepseek.v1.chainmining.command.BackCommand;
-import net.deepseek.v1.chainmining.command.ChainMiningCommands;
-import net.deepseek.v1.chainmining.command.ReforgedCommand;
-import net.deepseek.v1.chainmining.command.SetHomeCommand;
+import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.config.ModConfig;
 import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
@@ -53,6 +50,7 @@ public class ChainMiningReforged implements ModInitializer {
 			commandDispatcher.register(ReforgedCommand.register(commandRegistryAccess));
 			commandDispatcher.register(SetHomeCommand.register());
 			commandDispatcher.register(BackCommand.register());
+			commandDispatcher.register(HealthCommand.register());
 		});
 
 		LOGGER.info("Hello Fabric world!");

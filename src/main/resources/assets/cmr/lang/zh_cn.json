@@ -11,5 +11,16 @@
   "text.autoconfig.chainmining.option.customAllowedBlocks": "自定义方块白名单",
   "text.autoconfig.chainmining.option.customDeniedBlocks": "自定义方块黑名单",
   "key.chainmining.chain_mining_reforged.name": "开始连锁",
-  "category.chainmining.main.title": "连锁重置"
+  "category.chainmining.main.title": "连锁重置",
+
+  "commands.health.add.success": "已增加 %s 点生命值",
+  "commands.health.remove.success": "已移除 %s 点生命值",
+  "commands.health.set.success": "已设置生命值为 %s",
+  "commands.health.limit.success": "已%s 生命上限至 %s",
+  "commands.health.modify.default": "成功对 %d 个实体执行了 %s 操作",
+  "commands.health.modify.conditional": "在指定区域内对 %d 个实体执行了 %s 操作",
+  "commands.health.invalid_entity": "目标必须是一个活体生物",
+  "commands.health.invalid_amount": "数值必须大于0",
+  "commands.health.invalid_limit_operation": "无效的生命上限操作类型 (仅支持 add/remove/set)",
+  "commands.health.invalid_modify_operation": "无效的生命值操作类型 (仅支持 add/remove/set)"
 }

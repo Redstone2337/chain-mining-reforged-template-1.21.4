@@ -3,6 +3,7 @@ package net.deepseek.v1.chainmining.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.FloatArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import net.minecraft.command.CommandRegistryAccess;
@@ -28,9 +29,8 @@ public class HealthCommand {
     private static final SimpleCommandExceptionType INVALID_LIMIT_OPERATION = new SimpleCommandExceptionType(Text.translatable("commands.health.invalid_limit_operation"));
     private static final SimpleCommandExceptionType INVALID_MODIFY_OPERATION = new SimpleCommandExceptionType(Text.translatable("commands.health.invalid_modify_operation"));
 
-    public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess registryAccess) {
-        dispatcher.register(
-            CommandManager.literal("health")
+    public static LiteralArgumentBuilder<ServerCommandSource> register() {
+       return CommandManager.literal("health")
                 .requires(source -> source.hasPermissionLevel(2))
                 // 基础生命值操作
                 .then(CommandManager.argument("target", EntityArgumentType.entity())
@@ -112,7 +112,7 @@ public class HealthCommand {
                             )
                         )
                     )
-                )))
+                ))
         );
     }
 

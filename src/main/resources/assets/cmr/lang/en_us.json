@@ -12,5 +12,16 @@
   "text.autoconfig.chainmining.option.customDeniedBlocks": "Custom Denied Blocks",
   "key.chainmining.chain_mining_reforged.name": "Chain Mining Key",
   "category.chainmining.main.title": "Chain Mining Reforged",
-  "enchantment.cmr.fire_for_oneself": "Fire One Oneself"
+  "enchantment.cmr.fire_for_oneself": "Fire One Oneself",
+
+  "commands.health.add.success": "Added %s health points",
+  "commands.health.remove.success": "Removed %s health points",
+  "commands.health.set.success": "Set health to %s",
+  "commands.health.limit.success": "%s max health to %s",
+  "commands.health.modify.default": "Successfully performed %s operation on %d entities",
+  "commands.health.modify.conditional": "Performed %s operation on %d entities within the specified area",
+  "commands.health.invalid_entity": "Target must be a living entity",
+  "commands.health.invalid_amount": "Value must be greater than 0",
+  "commands.health.invalid_limit_operation": "Invalid max health operation (only add/remove/set are supported)",
+  "commands.health.invalid_modify_operation": "Invalid health operation (only add/remove/set are supported)"
 }
