@@ -46,11 +46,12 @@ public class ChainMiningReforged implements ModInitializer {
 		});
 
 		CommandRegistrationCallback.EVENT.register((commandDispatcher, commandRegistryAccess, registrationEnvironment) -> {
-			commandDispatcher.register(ChainMiningCommands.register(commandRegistryAccess));
-			commandDispatcher.register(ReforgedCommand.register(commandRegistryAccess));
+//			commandDispatcher.register(ChainMiningCommands.register(commandRegistryAccess));
+//			commandDispatcher.register(ReforgedCommand.register(commandRegistryAccess));
 			commandDispatcher.register(SetHomeCommand.register());
 			commandDispatcher.register(BackCommand.register());
 			commandDispatcher.register(HealthCommand.register());
+			ChainMiningCommands.register(commandDispatcher,commandRegistryAccess);
 		});
 
 		LOGGER.info("Hello Fabric world!");

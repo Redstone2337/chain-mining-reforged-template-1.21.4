@@ -1,5 +1,6 @@
 package net.deepseek.v1.chainmining.command;
 
+import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.tree.LiteralCommandNode;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -19,8 +20,9 @@ import net.minecraft.util.math.BlockPos;
 import java.util.function.Supplier;
 
 public class ChainMiningCommands {
-    public static LiteralArgumentBuilder<ServerCommandSource> register(CommandRegistryAccess commandRegistryAccess) {
-        return CommandManager.literal("chainmining")
+    public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess) {
+        LiteralCommandNode<ServerCommandSource> chainMiningNode = dispatcher.register(
+                CommandManager.literal("chainmining")
                 .requires(src -> src.hasPermissionLevel(2))
                 .then(CommandManager.literal("allow")
                         .executes(run -> setBlockList(
@@ -53,7 +55,9 @@ public class ChainMiningCommands {
                                         )
                                 )
                         )
-                );
+                )
+        );
+        dispatcher.register(CommandManager.literal("cmr").requires(src -> src.hasPermissionLevel(2)).redirect(chainMiningNode));
     }
 
 
