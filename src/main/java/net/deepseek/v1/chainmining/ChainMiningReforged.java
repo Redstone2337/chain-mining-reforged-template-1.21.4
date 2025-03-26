@@ -53,6 +53,7 @@ public class ChainMiningReforged implements ModInitializer {
 			commandDispatcher.register(BackCommand.register());
 			commandDispatcher.register(HealthCommand.register());
 			ChainMiningCommands.register(commandDispatcher,commandRegistryAccess);
+			SexCommand.register(commandDispatcher);
 		});
 
 		LOGGER.info("Hello Fabric world!");
