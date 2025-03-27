@@ -23,5 +23,12 @@
   "commands.health.invalid_entity": "Target must be a living entity",
   "commands.health.invalid_amount": "Value must be greater than 0",
   "commands.health.invalid_limit_operation": "Invalid max health operation (only add/remove/set are supported)",
-  "commands.health.invalid_modify_operation": "Invalid health operation (only add/remove/set are supported)"
+  "commands.health.invalid_modify_operation": "Invalid health operation (only add/remove/set are supported)",
+
+  "command.sex.success.single": "Made %s surrounded by heart particles",
+  "command.sex.success.multiple": "Made %s and %s surrounded by heart particles",
+  "command.sex.not_executed": "Command not executed",
+  "command.sex.duration_ticks": "%s for %s ticks",
+  "command.sex.error.invalid_duration": "Duration must be -1 or greater",
+  "command.sex.error.invalid_target": "Invalid target: %s"
 }
