@@ -56,9 +56,11 @@ public class ModConfig implements ConfigData {
     @Comment("自定义禁止连锁的方块列表（黑名单模式）")
     public Set<String> customDeniedBlocks = new HashSet<>();
 
+    @Comment("最大信号传输距离")
     @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
     public int maxPowerDistance = 32;
 
+    @Comment("当前信号传输距离")
     @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
     public int currentPowerDistance = 15;
 

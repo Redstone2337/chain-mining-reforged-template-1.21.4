@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.command.HealthCommand;
 import net.deepseek.v1.chainmining.config.ModConfig;
+import net.deepseek.v1.chainmining.core.confug.ConfigManager;
 import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
@@ -40,6 +41,7 @@ public class ChainMiningReforged implements ModInitializer {
 		ModEnchantments.register();
 		ModEnchantmentEffects.register();
 		ModItemTags.register();
+		ConfigManager.initialize();
 
 		// 注册事件监听
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
