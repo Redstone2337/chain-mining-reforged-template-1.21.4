@@ -19,6 +19,13 @@ public class ConfigManager {
         return config.currentPowerDistance;
     }
 
+    public static void setMaxPowerDistance(int value) {
+        config.maxPowerDistance = Math.max(1, value);
+        // 确保当前值不超过新最大值
+        config.currentPowerDistance = Math.min(config.currentPowerDistance, config.maxPowerDistance);
+        AutoConfig.getConfigHolder(ModConfig.class).save();
+    }
+
     public static void setPowerDistance(int value) {
         config.currentPowerDistance = Math.min(value, config.maxPowerDistance);
         AutoConfig.getConfigHolder(ModConfig.class).save();

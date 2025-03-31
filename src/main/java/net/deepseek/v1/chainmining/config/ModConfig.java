@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Config(name = "chainmining")
+@Config(name = "chainminingreforged_config")
 public class ModConfig implements ConfigData {
     private String keys;
 
@@ -56,10 +56,10 @@ public class ModConfig implements ConfigData {
     @Comment("自定义禁止连锁的方块列表（黑名单模式）")
     public Set<String> customDeniedBlocks = new HashSet<>();
 
-    @Comment("最大信号输出距离")
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
     public int maxPowerDistance = 32;
 
-    @Comment("当前信号输出距离")
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
     public int currentPowerDistance = 15;
 
     public String getKeys() {
