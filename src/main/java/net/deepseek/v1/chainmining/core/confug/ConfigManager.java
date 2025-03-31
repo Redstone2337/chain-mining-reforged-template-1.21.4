@@ -1,0 +1,26 @@
+package net.deepseek.v1.chainmining.core.confug;
+
+// ConfigManager.java
+import me.shedaniel.autoconfig.AutoConfig;
+import net.deepseek.v1.chainmining.config.ModConfig;
+
+public class ConfigManager {
+    private static ModConfig config;
+
+    public static void initialize() {
+        config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+    }
+
+    public static int getMaxPowerDistance() {
+        return config.maxPowerDistance;
+    }
+
+    public static int getCurrentPowerDistance() {
+        return config.currentPowerDistance;
+    }
+
+    public static void setPowerDistance(int value) {
+        config.currentPowerDistance = Math.min(value, config.maxPowerDistance);
+        AutoConfig.getConfigHolder(ModConfig.class).save();
+    }
+}

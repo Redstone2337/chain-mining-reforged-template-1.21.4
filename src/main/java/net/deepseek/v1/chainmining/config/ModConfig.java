@@ -56,6 +56,12 @@ public class ModConfig implements ConfigData {
     @Comment("自定义禁止连锁的方块列表（黑名单模式）")
     public Set<String> customDeniedBlocks = new HashSet<>();
 
+    @Comment("最大信号输出距离")
+    public int maxPowerDistance = 32;
+
+    @Comment("当前信号输出距离")
+    public int currentPowerDistance = 15;
+
     public String getKeys() {
         return keys;
     }
