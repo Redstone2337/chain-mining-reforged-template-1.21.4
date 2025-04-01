@@ -6,14 +6,18 @@ import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.command.HealthCommand;
 import net.deepseek.v1.chainmining.config.ModConfig;
 import net.deepseek.v1.chainmining.core.confug.ConfigManager;
+import net.deepseek.v1.chainmining.core.data.PlayerSelectionData;
 import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
+import net.deepseek.v1.chainmining.core.render.SelectionRenderer;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,6 +65,15 @@ public class ChainMiningReforged implements ModInitializer {
 			TestCommand.register(commandDispatcher, commandRegistryAccess);
 		});
 
+		// 客户端渲染注册
+		        if (FabricLoader.getInstance().getEnvironmentType() == net.fabricmc.api.EnvType.CLIENT) {
+					SelectionRenderer.register();
+				}
+
+				        // 服务器关闭时清理数据
+		        ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
+					PlayerSelectionData.clearAll();
+				});
 
 		LOGGER.info("Hello Fabric world!");
 	}
