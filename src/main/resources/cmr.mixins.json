@@ -3,6 +3,7 @@
   "package": "net.deepseek.v1.chainmining.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractRedstoneGateBlockMixin",
     "ExampleMixin"
   ],
   "injectors": {
