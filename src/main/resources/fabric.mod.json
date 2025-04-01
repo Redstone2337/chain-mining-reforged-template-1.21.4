@@ -3,13 +3,14 @@
 	"id": "cmr",
 	"version": "${version}",
 	"name": "Chain Mining Reforged",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Thank you for choosing Chain Mining Reforged Mod! \n\n---A Command Mod for Minecraft 1.21.4 Fabric！ ",
 	"authors": [
-		"Me!"
+		"Redstone233",
+		"WhiteBear BEX"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Redstone2337/chain-mining-reforged-template-1.21.4"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/cmr/icon.png",
