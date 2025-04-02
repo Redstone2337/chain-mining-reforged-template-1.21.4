@@ -24,17 +24,18 @@ public abstract class AbstractRedstoneGateBlockMixin {
 //       }
 //       return ConfigManager.getCurrentPowerDistance();
 //   }
-    @Shadow
-    protected int getOutputLevel(BlockView world, BlockPos pos, BlockState state) {
-        return ConfigManager.getCurrentPowerDistance();
-    }
+//    @Shadow
+//    protected int getOutputLevel(BlockView world, BlockPos pos, BlockState state) {
+//        return 15;
+//    }
 
     @Inject(method = "getOutputLevel", at = @At("RETURN"), cancellable = true)
     private void onGetOutputLevel(BlockView world, BlockPos pos, BlockState state, CallbackInfoReturnable<Integer> cir) {
-        if (state.getBlock() instanceof MagmaBlock) {
-            cir.setReturnValue(ConfigManager.getCurrentPowerDistance());
-        } else {
-            cir.setReturnValue(ConfigManager.getMaxPowerDistance());
-        }
+//        if (state.getBlock() instanceof MagmaBlock) {
+//            cir.setReturnValue(0);
+//        } else {
+//            cir.setReturnValue(ConfigManager.getCurrentPowerDistance());
+//        }
+        cir.setReturnValue(ConfigManager.getCurrentPowerDistance());
     }
 }
