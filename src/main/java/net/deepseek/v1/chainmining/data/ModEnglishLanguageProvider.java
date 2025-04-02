@@ -15,5 +15,9 @@ public class ModEnglishLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.addEnchantment(ModEnchantments.FIRE_FOR_ONESELF,"Fire One Oneself");
+        translationBuilder.addEnchantment(ModEnchantments.ONE_PUSH,"One Push");
+        translationBuilder.addEnchantment(ModEnchantments.ICE_BLEND,"Ice Blend");
+        translationBuilder.addEnchantment(ModEnchantments.FIRE_BLEND,"Fire Blend");
+        translationBuilder.addEnchantment(ModEnchantments.ICE_FIRE_BLEND,"Ice Fire Blend");
     }
 }

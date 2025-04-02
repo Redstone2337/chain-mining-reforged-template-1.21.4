@@ -5,7 +5,7 @@ import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.command.HealthCommand;
 import net.deepseek.v1.chainmining.config.ModConfig;
-import net.deepseek.v1.chainmining.core.confug.ConfigManager;
+import net.deepseek.v1.chainmining.core.config.ConfigManager;
 import net.deepseek.v1.chainmining.core.data.PlayerSelectionData;
 import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
 import net.deepseek.v1.chainmining.core.render.SelectionRenderer;

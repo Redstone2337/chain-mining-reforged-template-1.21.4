@@ -18,6 +18,9 @@ public class ModEnchantmentTagProvider extends FabricTagProvider.EnchantmentTagP
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(EnchantmentTags.IN_ENCHANTING_TABLE)
                 .add(ModEnchantments.FIRE_FOR_ONESELF)
-                .add(ModEnchantments.ONE_PUSH);
+                .add(ModEnchantments.ONE_PUSH)
+                .add(ModEnchantments.ICE_BLEND)
+                .add(ModEnchantments.FIRE_BLEND)
+                .add(ModEnchantments.ICE_FIRE_BLEND);
     }
 }

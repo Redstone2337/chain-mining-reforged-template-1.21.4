@@ -1,8 +1,7 @@
 package net.deepseek.v1.chainmining.enchantments;
 
 import net.deepseek.v1.chainmining.ChainMiningReforged;
-import net.deepseek.v1.chainmining.core.entities.effects.OnePush;
-import net.deepseek.v1.chainmining.core.entities.effects.TestEnchantmentsEffect;
+import net.deepseek.v1.chainmining.core.entities.effects.*;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
@@ -23,6 +22,9 @@ public class ModEnchantments {
 
     public static final RegistryKey<Enchantment> FIRE_FOR_ONESELF = of("fire_for_oneself");
     public static final RegistryKey<Enchantment> ONE_PUSH = of("one_push");
+    public static final RegistryKey<Enchantment> ICE_BLEND = of("ice_blend");
+    public static final RegistryKey<Enchantment> FIRE_BLEND = of("fire_blend");
+    public static final RegistryKey<Enchantment> ICE_FIRE_BLEND = of("ice_fire_blend");
 
 
     public static void bootstrap(Registerable<Enchantment> registry) {
@@ -72,6 +74,69 @@ public class ModEnchantments {
                                 EnchantmentEffectTarget.ATTACKER,
                                 EnchantmentEffectTarget.VICTIM,
                                 new OnePush(true)
+                        )
+        );
+        register(registry,
+                ICE_BLEND,
+                Enchantment.builder(
+                        Enchantment.definition(
+                                registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                registryEntryLookup3.getOrThrow(ItemTags.BOW_ENCHANTABLE),
+                                10,
+                                1,
+                                Enchantment.leveledCost(1,5),
+                                Enchantment.leveledCost(2,4),
+                                5,
+                                AttributeModifierSlot.MAINHAND
+                        )
+                )
+                        .addEffect(
+                                EnchantmentEffectComponentTypes.POST_ATTACK,
+                                EnchantmentEffectTarget.ATTACKER,
+                                EnchantmentEffectTarget.VICTIM,
+                                new IceBlendEnchantmentsEntityEffect(true)
+                        )
+        );
+        register(registry,
+                FIRE_BLEND,
+                Enchantment.builder(
+                        Enchantment.definition(
+                                registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                registryEntryLookup3.getOrThrow(ItemTags.BOW_ENCHANTABLE),
+                                10,
+                                1,
+                                Enchantment.leveledCost(1,5),
+                                Enchantment.leveledCost(2,4),
+                                5,
+                                AttributeModifierSlot.MAINHAND
+                        )
+                )
+                        .addEffect(
+                                EnchantmentEffectComponentTypes.POST_ATTACK,
+                                EnchantmentEffectTarget.ATTACKER,
+                                EnchantmentEffectTarget.VICTIM,
+                                new FireBlendEnchantmentsEntityEffect(true)
+                        )
+        );
+        register(registry,
+                ICE_FIRE_BLEND,
+                Enchantment.builder(
+                        Enchantment.definition(
+                                registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                registryEntryLookup3.getOrThrow(ItemTags.BOW_ENCHANTABLE),
+                                10,
+                                1,
+                                Enchantment.leveledCost(1,5),
+                                Enchantment.leveledCost(2,4),
+                                5,
+                                AttributeModifierSlot.MAINHAND
+                        )
+                )
+                        .addEffect(
+                                EnchantmentEffectComponentTypes.POST_ATTACK,
+                                EnchantmentEffectTarget.ATTACKER,
+                                EnchantmentEffectTarget.VICTIM,
+                                new IceFireBlendEnchantmentsEntityEffect(true, true)
                         )
         );
     }

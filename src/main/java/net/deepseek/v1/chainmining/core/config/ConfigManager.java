@@ -1,4 +1,4 @@
-package net.deepseek.v1.chainmining.core.confug;
+package net.deepseek.v1.chainmining.core.config;
 
 // ConfigManager.java
 import me.shedaniel.autoconfig.AutoConfig;
