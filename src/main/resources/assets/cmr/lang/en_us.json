@@ -12,7 +12,12 @@
   "text.autoconfig.chainmining.option.customDeniedBlocks": "Custom Denied Blocks",
   "key.chainmining.chain_mining_reforged.name": "Chain Mining Key",
   "category.chainmining.main.title": "Chain Mining Reforged",
+
+  "enchantment.cmr.fire_blend": "Fire Blend",
   "enchantment.cmr.fire_for_oneself": "Fire One Oneself",
+  "enchantment.cmr.ice_blend": "Ice Blend",
+  "enchantment.cmr.ice_fire_blend": "Ice Fire Blend",
+  "enchantment.cmr.one_push": "One Push",
 
   "commands.health.add.success": "Added %s health points",
   "commands.health.remove.success": "Removed %s health points",

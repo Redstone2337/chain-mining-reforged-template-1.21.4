@@ -39,5 +39,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.IRON_SWORD)
                 .add(Items.STONE_SWORD)
                 .add(Items.WOODEN_SWORD);
+        getOrCreateTagBuilder(ModItemTags.ALL)
+                .addTags(
+                        ModItemTags.SWORD,
+                        ModItemTags.PICKAXE,
+                        ModItemTags.FUNCTION_LIST
+                );
     }
 }

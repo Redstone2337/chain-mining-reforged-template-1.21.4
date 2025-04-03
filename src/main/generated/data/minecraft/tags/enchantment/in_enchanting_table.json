@@ -1,6 +1,9 @@
 {
   "values": [
     "cmr:fire_for_oneself",
-    "cmr:one_push"
+    "cmr:one_push",
+    "cmr:ice_blend",
+    "cmr:fire_blend",
+    "cmr:ice_fire_blend"
   ]
 }

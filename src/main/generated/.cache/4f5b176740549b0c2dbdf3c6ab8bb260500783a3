@@ -1,3 +1,6 @@
 // 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/Enchantments Generator
+6c64dd6e0aba3ca5005b3ab113d157fb48963afc data/cmr/enchantment/fire_blend.json
 d2ee2141517a6d836062e100ce9e7161641a8087 data/cmr/enchantment/fire_for_oneself.json
+43ff44a2e820fb32cbcfef5b54ea3286fdca9763 data/cmr/enchantment/ice_blend.json
+a94eb4afa1ebd672f47365760b6adf11a92d5af1 data/cmr/enchantment/ice_fire_blend.json
 09ec70a53d17b7aa2c3a2bac896d50ed8f672023 data/cmr/enchantment/one_push.json

@@ -2,10 +2,7 @@ package net.deepseek.v1.chainmining.core.entities;
 
 import com.mojang.serialization.MapCodec;
 import net.deepseek.v1.chainmining.ChainMiningReforged;
-import net.deepseek.v1.chainmining.core.entities.effects.FireBlendEnchantmentsEntityEffect;
-import net.deepseek.v1.chainmining.core.entities.effects.IceBlendEnchantmentsEntityEffect;
-import net.deepseek.v1.chainmining.core.entities.effects.OnePush;
-import net.deepseek.v1.chainmining.core.entities.effects.TestEnchantmentsEffect;
+import net.deepseek.v1.chainmining.core.entities.effects.*;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -22,7 +19,7 @@ public class ModEnchantmentEffects {
         register("one_push", OnePush.CODEC);
         register("ice_blend", IceBlendEnchantmentsEntityEffect.CODEC);
         register("fire_blend", FireBlendEnchantmentsEntityEffect.CODEC);
-        register("ice_fire_blend", IceBlendEnchantmentsEntityEffect.CODEC);
+        register("ice_fire_blend", IceFireBlendEnchantmentsEntityEffect.CODEC);
 
         ChainMiningReforged.LOGGER.info("附魔效果注册成功！");
     }

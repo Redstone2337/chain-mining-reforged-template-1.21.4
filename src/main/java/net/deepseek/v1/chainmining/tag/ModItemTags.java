@@ -12,6 +12,7 @@ public class ModItemTags {
     public static final TagKey<Item> FUNCTION_LIST = of("function_list");
     public static final TagKey<Item> PICKAXE = of("pickaxe");
     public static final TagKey<Item> SWORD = of("sword");
+    public static final TagKey<Item> ALL = of("all_mod_tag");
 
     private static TagKey<Item> of(String id) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(ChainMiningReforged.MOD_ID, id));
