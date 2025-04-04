@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "fabric:type": "fabric:any",
+      "ingredients": [
+        "cmr:bedrock_stone",
+        "cmr:bedrock_stone"
+      ]
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cmr:bedrockium_blend"
+  }
+}

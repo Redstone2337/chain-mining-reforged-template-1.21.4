@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": "cmr:bedrockium_blend",
+    "Y": "minecraft:stick"
+  },
+  "pattern": [
+    "XXX",
+    " Y ",
+    " Y "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cmr:bedrockium_pickaxe"
+  }
+}

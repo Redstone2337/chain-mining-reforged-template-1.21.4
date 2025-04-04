@@ -1,0 +1,27 @@
+// 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/
+7763e8b7a9f62aa0aab539a738ada4fd8a8c19f8 data/cmr/advancement/recipes/combat/bedrock_axe.json
+66ea43b51c92c7656b08fc0ab9b6d650fd5e9807 data/cmr/advancement/recipes/combat/bedrock_hoe.json
+dd8d5825af3468d6e3d87254102390a0c9d34efa data/cmr/advancement/recipes/combat/bedrock_pickaxe.json
+d540b8f80548b4ff3b53ff96f126c1c8a231c565 data/cmr/advancement/recipes/combat/bedrock_shovel.json
+387681828873c436d49ad3ec372970159a620281 data/cmr/advancement/recipes/combat/bedrock_sword.json
+01427e47dbfe8740b5ab8640c24db9b894b0b82d data/cmr/advancement/recipes/combat/bedrockium_axe.json
+7426da5ac7ebc53592f5612d738fb929ca4d2e85 data/cmr/advancement/recipes/combat/bedrockium_hoe.json
+c7beefce62bb9773424556877ae6ea75dc3c11db data/cmr/advancement/recipes/combat/bedrockium_pickaxe.json
+d0b72f479acce0cefc4ed1305d77668cddc10784 data/cmr/advancement/recipes/combat/bedrockium_shovel.json
+09f3330f601342e311b202cc89df8546fe751bea data/cmr/advancement/recipes/combat/bedrockium_sword.json
+46f16100af36a39234e9d169d491068462fb77d1 data/cmr/advancement/recipes/misc/bedrock_stone.json
+e52b64e3834356f954c0dbe9c1d32f8d791a236b data/cmr/advancement/recipes/misc/bedrockium_blend.json
+19b47352e02a50ce145ad4247bf5bbdbdedbd4c5 data/cmr/advancement/recipes/misc/diamond_stick.json
+c3e1e393d7753d3e059a72c05f7ec16e55af05d5 data/cmr/recipe/bedrock_axe.json
+1914323fa739d84f4a4469748fdfd569134e7584 data/cmr/recipe/bedrock_hoe.json
+791907df38c74347a7705c41ab261bd89617de63 data/cmr/recipe/bedrock_pickaxe.json
+0098b2801670f581cea3ae18629af36a2c374a73 data/cmr/recipe/bedrock_shovel.json
+28a0014af214b28b0c39ac034112f24cf622fd4a data/cmr/recipe/bedrock_stone.json
+fc8baaa5fb84be8e5845575b0cc9f8e02c1fdf47 data/cmr/recipe/bedrock_sword.json
+98a8a53022320235ecfce1f8fdd9d1c2849e5650 data/cmr/recipe/bedrockium_axe.json
+35df9fdc4e9cdb34106512e7b722c33c134bc579 data/cmr/recipe/bedrockium_blend.json
+e9dbd0674212c33f7ce6a0f6ea43fa223f64efea data/cmr/recipe/bedrockium_hoe.json
+48948c88deb0cf61c44decc2087e72ef972bf4f2 data/cmr/recipe/bedrockium_pickaxe.json
+97f3f6e97dbbc198780290eed3a6623e937d6f69 data/cmr/recipe/bedrockium_shovel.json
+9e52cfa545e6166e51d2b56b1c9ac54cc2cf7bc0 data/cmr/recipe/bedrockium_sword.json
+7bff7d2f5f183c25b91915c2d7ddcbd389e83152 data/cmr/recipe/diamond_stick.json
