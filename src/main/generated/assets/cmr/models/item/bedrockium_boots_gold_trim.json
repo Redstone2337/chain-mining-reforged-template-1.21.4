@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cmr:item/bedrockium_boots",
+    "layer1": "cmr:item/bedrockium_boots_overlay",
+    "layer2": "minecraft:trims/items/bedrockium_boots_trim_gold"
+  }
+}

@@ -11,6 +11,8 @@ import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
 import net.deepseek.v1.chainmining.core.render.SelectionRenderer;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
+import net.deepseek.v1.chainmining.items.ModItems;
+import net.deepseek.v1.chainmining.items.groups.ModItemGroups;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
@@ -47,6 +49,8 @@ public class ChainMiningReforged implements ModInitializer {
 		ModEnchantmentEffects.register();
 		ModItemTags.register();
 		ConfigManager.initialize();
+		ModItems.register();
+		ModItemGroups.register();
 
 		// 注册事件监听
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {

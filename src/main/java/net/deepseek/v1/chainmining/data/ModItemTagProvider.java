@@ -1,5 +1,6 @@
 package net.deepseek.v1.chainmining.data;
 
+import net.deepseek.v1.chainmining.items.ModItems;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -44,6 +45,44 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                         ModItemTags.SWORD,
                         ModItemTags.PICKAXE,
                         ModItemTags.FUNCTION_LIST
+                );
+        getOrCreateTagBuilder(ModItemTags.BEDROCK_TOOL_MATERIALS)
+                .add(ModItems.BEDROCK_STONE);
+
+        getOrCreateTagBuilder(ModItemTags.BEDROCKIUM_TOOL_MATERIALS)
+                .add(ModItems.BEDROCKIUM_STONE);
+        getOrCreateTagBuilder(ModItemTags.REPAIRS_BEDROCK_ARMOR)
+                .add(ModItems.BEDROCK_STONE);
+        getOrCreateTagBuilder(ModItemTags.REPAIRS_BEDROCKIUM_ARMOR)
+                .add(ModItems.BEDROCKIUM_STONE);
+        getOrCreateTagBuilder(ItemTags.ARMOR_ENCHANTABLE)
+                .add(
+                        ModItems.BEDROCK_HELMET,
+                        ModItems.BEDROCK_CHESTPLATE,
+                        ModItems.BEDROCK_LEGGINGS,
+                        ModItems.BEDROCK_BOOTS,
+                        ModItems.BEDROCKIUM_HELMET,
+                        ModItems.BEDROCKIUM_CHESTPLATE,
+                        ModItems.BEDROCKIUM_LEGGINGS,
+                        ModItems.BEDROCKIUM_BOOTS
+                );
+        getOrCreateTagBuilder(ItemTags.WEAPON_ENCHANTABLE)
+                .add(
+                        ModItems.BEDROCK_AXE,
+                        ModItems.BEDROCKIUM_AXE,
+                        ModItems.BEDROCK_SWORD,
+                        ModItems.BEDROCKIUM_SWORD
+                );
+        getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(
+                        ModItems.BEDROCK_PICKAXE,
+                        ModItems.BEDROCKIUM_PICKAXE,
+                        ModItems.BEDROCK_SHOVEL,
+                        ModItems.BEDROCKIUM_SHOVEL,
+                        ModItems.BEDROCK_AXE,
+                        ModItems.BEDROCKIUM_AXE,
+                        ModItems.BEDROCK_HOE,
+                        ModItems.BEDROCKIUM_HOE
                 );
     }
 }

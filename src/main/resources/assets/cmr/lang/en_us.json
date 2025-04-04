@@ -13,7 +13,7 @@
   "text.autoconfig.chainmining.option.maxPowerDistance": "Max Power Distance",
   "text.autoconfig.chainmining.option.currentPowerDistance": "Current Power Distance",
   "text.autoconfig.chainmining.option.spawnMaxCount": "Spawn Max Count",
-    "text.autoconfig.chainmining.option.spawnNormalCount": "Spawn Normal Count",
+  "text.autoconfig.chainmining.option.spawnNormalCount": "Spawn Normal Count",
 
 
   "key.chainmining.chain_mining_reforged.name": "Chain Mining Key",
@@ -26,6 +26,27 @@
   "enchantment.cmr.ice_blend": "Ice Blend",
   "enchantment.cmr.ice_fire_blend": "Ice Fire Blend",
   "enchantment.cmr.one_push": "One Push",
+  "item.cmr.bedrock_axe": "Bedrock Axe",
+  "item.cmr.bedrock_boots": "Bedrock Boots",
+  "item.cmr.bedrock_chestplate": "Bedrock Chestplate",
+  "item.cmr.bedrock_helmet": "Bedrock Helmet",
+  "item.cmr.bedrock_hoe": "Bedrock Hoe",
+  "item.cmr.bedrock_leggings": "Bedrock Leggings",
+  "item.cmr.bedrock_pickaxe": "Bedrock Pickaxe",
+  "item.cmr.bedrock_shovel": "Bedrock Shovel",
+  "item.cmr.bedrock_stone": "Bedrock Stone",
+  "item.cmr.bedrock_sword": "Bedrock Sword",
+  "item.cmr.bedrockium_axe": "Bedrockium Axe",
+  "item.cmr.bedrockium_blend": "Bedrockium Stone",
+  "item.cmr.bedrockium_boots": "Bedrockium Boots",
+  "item.cmr.bedrockium_chestplate": "Bedrockium Chestplate",
+  "item.cmr.bedrockium_helmet": "Bedrockium Helmet",
+  "item.cmr.bedrockium_hoe": "Bedrockium Hoe",
+  "item.cmr.bedrockium_leggings": "Bedrockium Leggings",
+  "item.cmr.bedrockium_pickaxe": "Bedrockium Pickaxe",
+  "item.cmr.bedrockium_shovel": "Bedrockium Shovel",
+  "item.cmr.bedrockium_sword": "Bedrockium Sword",
+  "item.cmr.diamond_stick": "Diamond Stick",
 
   "commands.health.add.success": "Added %s health points",
   "commands.health.remove.success": "Removed %s health points",
@@ -43,5 +64,7 @@
   "command.sex.not_executed": "Command not executed",
   "command.sex.duration_ticks": "%s for %s ticks",
   "command.sex.error.invalid_duration": "Duration must be -1 or greater",
-  "command.sex.error.invalid_target": "Invalid target: %s"
+  "command.sex.error.invalid_target": "Invalid target: %s",
+  "itemGroup.cmr.bedrock": "Bedrock Craft",
+  "itemGroup.cmr.bedrockium": "Bedrickium Craft"
 }

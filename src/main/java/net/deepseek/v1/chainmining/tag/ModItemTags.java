@@ -13,6 +13,10 @@ public class ModItemTags {
     public static final TagKey<Item> PICKAXE = of("pickaxe");
     public static final TagKey<Item> SWORD = of("sword");
     public static final TagKey<Item> ALL = of("all_mod_tag");
+    public static final TagKey<Item> BEDROCK_TOOL_MATERIALS = of("bedrock_tool_materials");
+    public static final TagKey<Item> BEDROCKIUM_TOOL_MATERIALS = of("bedrockium_tool_materials");
+    public static final TagKey<Item> REPAIRS_BEDROCK_ARMOR = of("repairs_bedrock_armor");
+    public static final TagKey<Item> REPAIRS_BEDROCKIUM_ARMOR = of("repairs_bedrockium_armor");
 
     private static TagKey<Item> of(String id) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(ChainMiningReforged.MOD_ID, id));

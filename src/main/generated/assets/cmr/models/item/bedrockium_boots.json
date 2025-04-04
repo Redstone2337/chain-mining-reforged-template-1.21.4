@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cmr:item/bedrockium_boots",
+    "layer1": "cmr:item/bedrockium_boots_overlay"
+  }
+}
