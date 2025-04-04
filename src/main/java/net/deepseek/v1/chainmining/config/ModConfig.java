@@ -5,6 +5,9 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 import net.deepseek.v1.chainmining.core.keys.ModKeys;
+import net.minecraft.util.math.MathHelper;
+import org.jetbrains.annotations.Range;
+import org.spongepowered.asm.mixin.injection.Inject;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -63,6 +66,15 @@ public class ModConfig implements ConfigData {
     @Comment("当前信号传输距离")
     @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
     public int currentPowerDistance = 15;
+
+    @Comment("最大生成数量")
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 100)
+    public int spawnMaxCount = 20;
+
+    @Comment("默认生成数量")
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 100)
+    public int spawnNormalCount = 10;
+
 
     public String getKeys() {
         return keys;

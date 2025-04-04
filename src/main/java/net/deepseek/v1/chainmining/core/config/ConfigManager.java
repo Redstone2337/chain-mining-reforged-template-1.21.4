@@ -3,6 +3,7 @@ package net.deepseek.v1.chainmining.core.config;
 // ConfigManager.java
 import me.shedaniel.autoconfig.AutoConfig;
 import net.deepseek.v1.chainmining.config.ModConfig;
+import net.minecraft.client.gui.screen.Screen;
 
 public class ConfigManager {
     private static ModConfig config;
@@ -29,5 +30,13 @@ public class ConfigManager {
     public static void setPowerDistance(int value) {
         config.currentPowerDistance = Math.min(value, config.maxPowerDistance);
         AutoConfig.getConfigHolder(ModConfig.class).save();
+    }
+
+    public static ModConfig getConfig() {
+        return config;
+    }
+
+    public static Screen getScreen(Screen parent) {
+        return AutoConfig.getConfigScreen(ModConfig.class, parent).get();
     }
 }

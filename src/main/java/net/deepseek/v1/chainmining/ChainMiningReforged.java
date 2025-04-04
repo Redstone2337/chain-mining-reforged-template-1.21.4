@@ -12,6 +12,7 @@ import net.deepseek.v1.chainmining.core.render.SelectionRenderer;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
+import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -53,6 +54,7 @@ public class ChainMiningReforged implements ModInitializer {
 			handler.afterBlockBreak(world, player, pos, state, blockEntity);
 		});
 
+
 		CommandRegistrationCallback.EVENT.register((commandDispatcher, commandRegistryAccess, registrationEnvironment) -> {
 //			commandDispatcher.register(ChainMiningCommands.register(commandRegistryAccess));
 //			commandDispatcher.register(ReforgedCommand.register(commandRegistryAccess));
@@ -67,7 +69,7 @@ public class ChainMiningReforged implements ModInitializer {
 		});
 
 		// 客户端渲染注册
-		        if (FabricLoader.getInstance().getEnvironmentType() == net.fabricmc.api.EnvType.CLIENT) {
+		        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
 					SelectionRenderer.register();
 				}
 

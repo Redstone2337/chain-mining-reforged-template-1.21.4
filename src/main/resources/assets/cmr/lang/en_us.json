@@ -10,8 +10,16 @@
   "text.autoconfig.chainmining.option.defaultDeniedBlocks": "Default Denied Blocks",
   "text.autoconfig.chainmining.option.customAllowedBlocks": "Custom Allowed Blocks",
   "text.autoconfig.chainmining.option.customDeniedBlocks": "Custom Denied Blocks",
+  "text.autoconfig.chainmining.option.maxPowerDistance": "Max Power Distance",
+  "text.autoconfig.chainmining.option.currentPowerDistance": "Current Power Distance",
+  "text.autoconfig.chainmining.option.spawnMaxCount": "Spawn Max Count",
+    "text.autoconfig.chainmining.option.spawnNormalCount": "Spawn Normal Count",
+
+
   "key.chainmining.chain_mining_reforged.name": "Chain Mining Key",
   "category.chainmining.main.title": "Chain Mining Reforged",
+  "category.chainmining.main.description": "Chain Mining Reforged",
+  "key.tadspawner.spawn": "Spawn TAD",
 
   "enchantment.cmr.fire_blend": "Fire Blend",
   "enchantment.cmr.fire_for_oneself": "Fire One Oneself",
