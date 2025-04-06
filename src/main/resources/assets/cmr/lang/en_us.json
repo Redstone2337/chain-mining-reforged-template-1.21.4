@@ -21,6 +21,7 @@
   "category.chainmining.main.description": "Chain Mining Reforged",
   "key.tadspawner.spawn": "Spawn TAD",
 
+  "block.cmr.bedrockium_ore": "Bedrockium Ore",
   "enchantment.cmr.fire_blend": "Fire Blend",
   "enchantment.cmr.fire_for_oneself": "Fire One Oneself",
   "enchantment.cmr.ice_blend": "Ice Blend",
@@ -37,7 +38,6 @@
   "item.cmr.bedrock_stone": "Bedrock Stone",
   "item.cmr.bedrock_sword": "Bedrock Sword",
   "item.cmr.bedrockium_axe": "Bedrockium Axe",
-  "item.cmr.bedrockium_blend": "Bedrockium Stone",
   "item.cmr.bedrockium_boots": "Bedrockium Boots",
   "item.cmr.bedrockium_chestplate": "Bedrockium Chestplate",
   "item.cmr.bedrockium_helmet": "Bedrockium Helmet",
@@ -45,6 +45,7 @@
   "item.cmr.bedrockium_leggings": "Bedrockium Leggings",
   "item.cmr.bedrockium_pickaxe": "Bedrockium Pickaxe",
   "item.cmr.bedrockium_shovel": "Bedrockium Shovel",
+  "item.cmr.bedrockium_stone": "Bedrockium Stone",
   "item.cmr.bedrockium_sword": "Bedrockium Sword",
   "item.cmr.diamond_stick": "Diamond Stick",
 

@@ -1,6 +1,7 @@
 package net.deepseek.v1.chainmining.items.groups;
 
 import net.deepseek.v1.chainmining.ChainMiningReforged;
+import net.deepseek.v1.chainmining.blocks.ModBlocks;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

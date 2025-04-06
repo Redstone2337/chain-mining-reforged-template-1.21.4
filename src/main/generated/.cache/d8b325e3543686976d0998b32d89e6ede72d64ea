@@ -1,4 +1,5 @@
 // 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/Model Definitions
+b4bd50a041790c4529a275938bae2cb9c4565008 assets/cmr/blockstates/bedrockium_ore.json
 560c412c4660451ed7bc61d0a1f1fa52f36b95df assets/cmr/items/bedrock_axe.json
 0eaddc933d7849b8984cff02fff429060aa83a4d assets/cmr/items/bedrock_boots.json
 90c053fce1586978cab34d3947600fa7c3722ce8 assets/cmr/items/bedrock_chestplate.json
@@ -9,14 +10,16 @@ d29669ff8f2bcf3495125c1b238e3d4822efaa9b assets/cmr/items/bedrock_pickaxe.json
 5965ac323c4058a2c03bb8d4c4d07bcc1204ee81 assets/cmr/items/bedrock_shovel.json
 0d11ddc75c5c12ffed6243da0a067e5707d4d4e9 assets/cmr/items/bedrock_stone.json
 d651f2aba169d04b8c9611706c222692fa226fb8 assets/cmr/items/bedrock_sword.json
-53e4ceca7fb757422ec51f3cbee4e203164270f0 assets/cmr/items/bedrockium_blend.json
 733851d908b92117713245c2fbddd82f58e865e9 assets/cmr/items/bedrockium_boots.json
 4dba5e3b1a73f20b52ec1235ad503d9a1732541f assets/cmr/items/bedrockium_chestplate.json
 888d8c0ec948f3de0b85baddfd087794a1dfa5d2 assets/cmr/items/bedrockium_helmet.json
 a5fcc1e9deb0455f0dd6928c17b1405eafb56ada assets/cmr/items/bedrockium_leggings.json
+143516612ec8b6be223b3507d3202fee01102f96 assets/cmr/items/bedrockium_ore.json
 2a4de8e74620dedbb1fed76c4aac53c25af598ef assets/cmr/items/bedrockium_pickaxe.json
+a1127f5232861bdce96d4f4879e0efd1867c2c45 assets/cmr/items/bedrockium_stone.json
 96c1767d789ecaf7c915b5e3859ad2820711e0e3 assets/cmr/items/bedrockium_sword.json
 838de489a724d55552e32a04873fa2edfa4b7654 assets/cmr/items/diamond_stick.json
+12f19d0e4257951e480f1a0904931effa2447ee8 assets/cmr/models/block/bedrockium_ore.json
 a54eaa0497cc313287d30a5e995ad6f95225a6a3 assets/cmr/models/item/bedrock_axe.json
 8351d1c254b4bfba57aa1b6ff1c24d7beb48b0e7 assets/cmr/models/item/bedrock_boots.json
 104772c8a8a2d479e8099f14989fd312217165ff assets/cmr/models/item/bedrock_boots_amethyst_trim.json
@@ -71,7 +74,6 @@ eacb2a19cc973e15ad947bee97257879b6b84a64 assets/cmr/models/item/bedrock_leggings
 2ae5d61593c456af42fba71fe8fba1fb267910ab assets/cmr/models/item/bedrock_shovel.json
 0facee22275590c146a936baced2e6931d31c816 assets/cmr/models/item/bedrock_stone.json
 2dac9267fc50d530af88ea0c50b792fb65286894 assets/cmr/models/item/bedrock_sword.json
-6ad8e79241e54904a96001225e0d41f682435580 assets/cmr/models/item/bedrockium_blend.json
 3564171640a5dfd95c01f12ce0a0da46a9cb4bcb assets/cmr/models/item/bedrockium_boots.json
 8b6d649b4b5775b8a514f482e5aa0377d670f0c9 assets/cmr/models/item/bedrockium_boots_amethyst_trim.json
 9d76cc5f1f029662614455203c561116cf1c6687 assets/cmr/models/item/bedrockium_boots_copper_trim.json
@@ -121,5 +123,6 @@ a70161bbfd2e90e81d2efa5ae3ef0374f6fe0b42 assets/cmr/models/item/bedrockium_leggi
 3c91b15e79d7d8f140d666d088d23c991f41cc90 assets/cmr/models/item/bedrockium_leggings_redstone_trim.json
 3ac0ee65edde60e453a916a8bbc013501c79fa9e assets/cmr/models/item/bedrockium_leggings_resin_trim.json
 9dd6e1ecd8154feb17c849f92fdd113079bdda2f assets/cmr/models/item/bedrockium_pickaxe.json
+39f4ddee8847888afb6a1c0106ada492ad1d1c58 assets/cmr/models/item/bedrockium_stone.json
 79f703db12583f0bc55e2d71d35951019dc133a1 assets/cmr/models/item/bedrockium_sword.json
 86ad4fea7e14c693369d2cb10fe1c84ee19d43f8 assets/cmr/models/item/diamond_stick.json

@@ -1,5 +1,6 @@
 package net.deepseek.v1.chainmining.data;
 
+import net.deepseek.v1.chainmining.blocks.ModBlocks;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -41,5 +42,6 @@ public class ModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BEDROCKIUM_HELMET,"Bedrockium Helmet");
         translationBuilder.add(ModItems.BEDROCKIUM_LEGGINGS,"Bedrockium Leggings");
         translationBuilder.add(ModItems.BEDROCKIUM_BOOTS,"Bedrockium Boots");
+        translationBuilder.add(ModBlocks.BEDROCKIUM_ORE,"Bedrockium Ore");
     }
 }

@@ -1,5 +1,6 @@
 package net.deepseek.v1.chainmining.data;
 
+import net.deepseek.v1.chainmining.blocks.ModBlocks;
 import net.deepseek.v1.chainmining.core.armor.ModEquipmentAssetKeys;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -16,7 +17,8 @@ public class ModModelsProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+//        blockStateModelGenerator.registerSimpleState(ModBlocks.BEDROCKIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BEDROCKIUM_ORE);
     }
 
     @Override
