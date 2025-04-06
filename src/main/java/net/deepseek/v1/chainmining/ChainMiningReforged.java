@@ -2,6 +2,7 @@ package net.deepseek.v1.chainmining;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import net.deepseek.v1.chainmining.blocks.ModBlocks;
 import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.command.HealthCommand;
 import net.deepseek.v1.chainmining.config.ModConfig;
@@ -51,6 +52,7 @@ public class ChainMiningReforged implements ModInitializer {
 		ConfigManager.initialize();
 		ModItems.register();
 		ModItemGroups.register();
+		ModBlocks.register();
 
 		// 注册事件监听
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {

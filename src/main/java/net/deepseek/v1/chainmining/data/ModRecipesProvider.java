@@ -141,11 +141,20 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                         .criterion("has_item", conditionsFromItem(Items.STICK))
                         .offerTo(recipeExporter);
 
-                createShapeless(RecipeCategory.MISC,ModItems.BEDROCKIUM_STONE)
-                        .input(DefaultCustomIngredients.any(
-                                Ingredient.ofItem(ModItems.BEDROCK_STONE), Ingredient.ofItem(ModItems.BEDROCK_STONE)
-                            )
-                        )
+//                createShapeless(RecipeCategory.MISC,ModItems.BEDROCKIUM_STONE)
+//                        .input(DefaultCustomIngredients.any(
+//                                Ingredient.ofItem(ModItems.BEDROCK_STONE), Ingredient.ofItem(ModItems.BEDROCK_STONE)
+//                            )
+//                        )
+//                        .criterion("has_item", conditionsFromItem(ModItems.BEDROCK_STONE))
+//                        .offerTo(recipeExporter);
+
+                createShaped(RecipeCategory.MISC,ModItems.BEDROCKIUM_STONE)
+                        .pattern(" X ")
+                        .pattern("XYX")
+                        .pattern(" X ")
+                        .input('X', ModItems.BEDROCK_STONE)
+                        .input('Y', Items.NETHERITE_SCRAP)
                         .criterion("has_item", conditionsFromItem(ModItems.BEDROCK_STONE))
                         .offerTo(recipeExporter);
             }

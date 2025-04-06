@@ -78,7 +78,7 @@ public class ModItems {
     public static final Item BEDROCK_STONE = register("bedrock_stone",Item::new,
             new Item.Settings().maxCount(64).rarity(Rarity.EPIC));
 
-    public static final Item BEDROCKIUM_STONE = register("bedrockium_blend",Item::new,
+    public static final Item BEDROCKIUM_STONE = register("bedrockium_stone",Item::new,
             new Item.Settings().maxCount(64).rarity(Rarity.EPIC));
 
     public static final Item DIAMOND_STICK = register("diamond_stick",Item::new,
