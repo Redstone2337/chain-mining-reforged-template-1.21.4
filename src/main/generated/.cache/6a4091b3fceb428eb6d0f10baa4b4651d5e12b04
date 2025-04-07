@@ -1,0 +1,7 @@
+// 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/World Generator
+9f73343f4e037d36c3b54f8a072180e766832eaa data/cmr/worldgen/configured_feature/bedrockium_ore_overworld_large.json
+8fed07f005ec38e1411b9349939a1ec84362a80e data/cmr/worldgen/configured_feature/bedrockium_ore_overworld_medium.json
+54e79df451ada2826fb64e53ef6411ca1b2a6d62 data/cmr/worldgen/configured_feature/bedrockium_ore_overworld_small.json
+0d5e8dc7ee389ca86af2b44389a55cf34268a354 data/cmr/worldgen/placed_feature/overworld_bedrockium_ore.json
+a0c36dfdcf9bd53f31bdc822966689eeae6d6d1a data/cmr/worldgen/placed_feature/overworld_bedrockium_ore_large.json
+88fd34261d3d3fa32e21b36fffaecc8b8d25e3f8 data/cmr/worldgen/placed_feature/overworld_bedrockium_ore_medium.json
