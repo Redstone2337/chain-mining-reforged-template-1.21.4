@@ -28,7 +28,8 @@ public class ModPlacedFeatures {
 
         register(featureRegisterable, OVERWORLD_BEDROCKIUM_ORE_KEY, featureRegistry.getOrThrow(ModConfiguredFeatures.BEDROCKIUM_ORE_OVERWORLD),
                 ModOrePlacedFeatures.modifiersWithCount(12, HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
-//                ModOrePlacedFeatures.createFromVeinGenerator((AdvancedVeinGenerator) generator.getShapeGenerator(),HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(40)));
+                ModOrePlacedFeatures.createFromVeinGenerator((AdvancedVeinGenerator) generator.getShapeGenerator(),HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(40)));
+
     }
 
 
