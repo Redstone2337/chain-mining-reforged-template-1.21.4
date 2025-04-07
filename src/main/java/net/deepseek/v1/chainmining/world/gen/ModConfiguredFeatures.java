@@ -18,7 +18,16 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final RegistryKey<ConfiguredFeature<?,?>> BEDROCKIUM_ORE_OVERWORLD = of("bedrockium_ore_overworld");
+    public static final RegistryKey<ConfiguredFeature<?,?>> BEDROCKIUM_ORE_OVERWORLD_SMALL = of("bedrockium_ore_overworld_small");
+    public static final RegistryKey<ConfiguredFeature<?,?>> BEDROCKIUM_ORE_OVERWORLD_MEDIUM = of("bedrockium_ore_overworld_medium");
+    public static final RegistryKey<ConfiguredFeature<?,?>> BEDROCKIUM_ORE_OVERWORLD_LARGE = of("bedrockium_ore_overworld_large");
+
+
+
+//    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_DIAMOND_SMALL = ConfiguredFeatures.of("ore_diamond_small");
+//    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_DIAMOND_MEDIUM = ConfiguredFeatures.of("ore_diamond_medium");
+//    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_DIAMOND_LARGE = ConfiguredFeatures.of("ore_diamond_large");
+
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable) {
         RuleTest stoneReplace = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -26,9 +35,12 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> overworldTargets = List.of(
                 OreFeatureConfig.createTarget(stoneReplace, ModBlocks.BEDROCKIUM_ORE.getDefaultState())
+                , OreFeatureConfig.createTarget(deepslateReplace, ModBlocks.BEDROCKIUM_ORE.getDefaultState())
         );
 
-        register(featureRegisterable, BEDROCKIUM_ORE_OVERWORLD, Feature.ORE, new OreFeatureConfig(overworldTargets, 8));
+        register(featureRegisterable, BEDROCKIUM_ORE_OVERWORLD_SMALL, Feature.ORE, new OreFeatureConfig(overworldTargets, 4, 0.5F));
+        register(featureRegisterable, BEDROCKIUM_ORE_OVERWORLD_MEDIUM, Feature.ORE, new OreFeatureConfig(overworldTargets, 12, 0.7F));
+        register(featureRegisterable, BEDROCKIUM_ORE_OVERWORLD_LARGE, Feature.ORE, new OreFeatureConfig(overworldTargets, 8, 1.0F));
 
     }
 
