@@ -46,6 +46,6 @@ public class ModModelsProvider extends FabricModelProvider {
 
         itemModelGenerator.registerBow(ModItems.BEDROCKIUM_BOW);
         itemModelGenerator.registerArmor(ModItems.BEDROCKIUM_ARROW, ModEquipmentAssetKeys.BEDROCKIUM_ARROW,"bedrockium_arrow",true);
-        itemModelGenerator.registerTippedArrow(ModItems.BEDROCKIUM_ARROW);
+        itemModelGenerator.registerTippedArrow(ModItems.TRPPED_BEDROCKIUM_ARROW);
     }
 }

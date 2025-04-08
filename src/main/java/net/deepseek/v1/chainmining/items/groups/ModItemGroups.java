@@ -60,6 +60,7 @@ public class ModItemGroups {
                             entries.add(ModBlocks.BEDROCKIUM_ORE);
                             entries.add(ModItems.BEDROCKIUM_ARROW);
                             entries.add(ModItems.BEDROCKIUM_BOW);
+                            entries.add(ModItems.TRPPED_BEDROCKIUM_ARROW);
                         }).build());
     }
 }

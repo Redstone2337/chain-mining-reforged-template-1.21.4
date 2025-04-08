@@ -92,6 +92,12 @@ public class ModItems {
                     .attributeModifiers(BedrockiumArrowItem.createAttributeModifiers())
             ));
 
+    public static final Item TRPPED_BEDROCKIUM_ARROW = register("trpped_bedrockium_arrow",
+            (settings) -> new BedrockiumArrowItem(settings.maxCount(64).rarity(Rarity.EPIC)
+                    .component(DataComponentTypes.TOOL,BedrockiumArrowItem.createToolComponent())
+                    .attributeModifiers(BedrockiumArrowItem.createAttributeModifiers())
+            ));
+
     public static final Item BEDROCKIUM_BOW = register("bedrockium_bow",
             (settings) -> new BedrockiumBowItem(settings.maxCount(1).rarity(Rarity.EPIC)
                     .maxDamage(8000000)
