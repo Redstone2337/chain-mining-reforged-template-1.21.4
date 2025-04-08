@@ -48,6 +48,10 @@
   "item.cmr.bedrockium_stone": "Bedrockium Stone",
   "item.cmr.bedrockium_sword": "Bedrockium Sword",
   "item.cmr.diamond_stick": "Diamond Stick",
+		"item.cmr.bedrockium_bow": "Bedrockium Bow",
+  "item.cmr.bedrockium_arrow": "Bedrockium Arrow",
+  "item.cmr.trpped_bedrock_arrow": "Trpped Bedrockium Arrow",
+
 
   "commands.health.add.success": "Added %s health points",
   "commands.health.remove.success": "Removed %s health points",
