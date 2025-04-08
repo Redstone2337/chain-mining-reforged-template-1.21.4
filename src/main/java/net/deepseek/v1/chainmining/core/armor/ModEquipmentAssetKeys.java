@@ -22,6 +22,7 @@ public interface ModEquipmentAssetKeys {
     RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.of(ChainMiningReforged.MOD_ID,"equipment_asset"));
     RegistryKey<EquipmentAsset> BEDROCK_ASSET = register("bedrock_armor");
     RegistryKey<EquipmentAsset> BEDROCKIUM_ASSET = register("bedrockium_armor");
+    RegistryKey<EquipmentAsset> BEDROCKIUM_ARROW = register("bedrockium_arrow");
 
     static void accept(BiConsumer<Identifier, EquipmentModel> equipmentModelBiConsumer) {
         equipmentModelBiConsumer.accept(BEDROCK, BEDROCK_MODEL);

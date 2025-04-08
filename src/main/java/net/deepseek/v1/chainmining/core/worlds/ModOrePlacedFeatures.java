@@ -2,7 +2,6 @@ package net.deepseek.v1.chainmining.core.worlds;
 
 import net.deepseek.v1.chainmining.impl.AdvancedVeinGenerator;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;

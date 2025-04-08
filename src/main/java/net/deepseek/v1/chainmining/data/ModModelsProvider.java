@@ -43,5 +43,9 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.BEDROCKIUM_CHESTPLATE, ModEquipmentAssetKeys.BEDROCKIUM_ASSET,"bedrockium_chestplate",true);
         itemModelGenerator.registerArmor(ModItems.BEDROCKIUM_LEGGINGS, ModEquipmentAssetKeys.BEDROCKIUM_ASSET,"bedrockium_leggings",true);
         itemModelGenerator.registerArmor(ModItems.BEDROCKIUM_BOOTS, ModEquipmentAssetKeys.BEDROCKIUM_ASSET,"bedrockium_boots",true);
+
+        itemModelGenerator.registerBow(ModItems.BEDROCKIUM_BOW);
+        itemModelGenerator.registerArmor(ModItems.BEDROCKIUM_ARROW, ModEquipmentAssetKeys.BEDROCKIUM_ARROW,"bedrockium_arrow",true);
+        itemModelGenerator.registerTippedArrow(ModItems.BEDROCKIUM_ARROW);
     }
 }

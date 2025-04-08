@@ -1,5 +1,6 @@
 package net.deepseek.v1.chainmining.entity.function;
 
+import net.deepseek.v1.chainmining.entity.ModEntityType;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.Entity;
@@ -9,7 +10,6 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -35,17 +35,18 @@ public class BedrockiumArrowEntity extends PersistentProjectileEntity {
     private static final TrackedData<Integer> COLOR = DataTracker.registerData(BedrockiumArrowEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final byte PARTICLE_EFFECT_STATUS = 0;
 
-    public BedrockiumArrowEntity(EntityType<? extends ArrowEntity> entityType, World world) {
-        super(entityType, world);
-    }
-
     public BedrockiumArrowEntity(World world, double x, double y, double z, ItemStack stack, @Nullable ItemStack shotFrom) {
-        super(EntityType.ARROW, x, y, z, world, stack, shotFrom);
+        super(ModEntityType.ARROW, x, y, z, world, stack, shotFrom);
         this.initColor();
     }
 
     public BedrockiumArrowEntity(World world, LivingEntity owner, ItemStack stack, @Nullable ItemStack shotFrom) {
-        super(EntityType.ARROW, owner, world, stack, shotFrom);
+        super(ModEntityType.ARROW, owner, world, stack, shotFrom);
+        this.initColor();
+    }
+
+    public BedrockiumArrowEntity(EntityType<BedrockiumArrowEntity> bedrockiumArrowEntityEntityType, World world) {
+        super(bedrockiumArrowEntityEntityType, world);
         this.initColor();
     }
 
