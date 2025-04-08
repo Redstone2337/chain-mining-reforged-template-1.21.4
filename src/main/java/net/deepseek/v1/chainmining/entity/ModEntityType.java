@@ -10,6 +10,8 @@ import net.minecraft.util.Identifier;
 
 public class ModEntityType {
 
+
+
     private static <T extends Entity> EntityType<T> register(RegistryKey<EntityType<?>> key, EntityType.Builder<T> type) {
         return Registry.register(Registries.ENTITY_TYPE, key, type.build(key));
     }

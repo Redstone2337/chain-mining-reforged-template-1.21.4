@@ -2,7 +2,9 @@ package net.deepseek.v1.chainmining.items;
 
 import net.deepseek.v1.chainmining.ChainMiningReforged;
 import net.deepseek.v1.chainmining.core.armor.ModArmorMaterials;
-import net.deepseek.v1.chainmining.items.groups.ModItemGroups;
+import net.deepseek.v1.chainmining.items.function.BedrockiumArrowItem;
+import net.deepseek.v1.chainmining.items.function.BedrockiumBowItem;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -83,6 +85,19 @@ public class ModItems {
 
     public static final Item DIAMOND_STICK = register("diamond_stick",Item::new,
             new Item.Settings().maxCount(64).rarity(Rarity.EPIC));
+
+    public static final Item BEDROCKIUM_ARROW = register("bedrockium_arrow",
+            (settings) -> new BedrockiumArrowItem(settings.maxCount(64).rarity(Rarity.EPIC)
+                    .component(DataComponentTypes.TOOL,BedrockiumArrowItem.createToolComponent())
+                    .attributeModifiers(BedrockiumArrowItem.createAttributeModifiers())
+            ));
+
+    public static final Item BEDROCKIUM_BOW = register("bedrockium_bow",
+            (settings) -> new BedrockiumBowItem(settings.maxCount(1).rarity(Rarity.EPIC)
+                    .maxDamage(8000000)
+                    .component(DataComponentTypes.TOOL,BedrockiumBowItem.createToolComponent())
+                    .attributeModifiers(BedrockiumBowItem.createAttributeModifiers())
+            ));
 
     public static final Item BEDROCK_HELMET = register("bedrock_helmet",
             (settings) -> new ArmorItem(ModArmorMaterials.BEDROCK, EquipmentType.HELMET,

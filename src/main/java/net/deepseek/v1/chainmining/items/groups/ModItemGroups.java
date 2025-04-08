@@ -58,6 +58,8 @@ public class ModItemGroups {
                             entries.add(ModItems.BEDROCKIUM_BOOTS);
                             entries.add(ModItems.DIAMOND_STICK);
                             entries.add(ModBlocks.BEDROCKIUM_ORE);
+                            entries.add(ModItems.BEDROCKIUM_ARROW);
+                            entries.add(ModItems.BEDROCKIUM_BOW);
                         }).build());
     }
 }
