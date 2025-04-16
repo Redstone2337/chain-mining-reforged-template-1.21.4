@@ -61,6 +61,7 @@ public class ModItemGroups {
                             entries.add(ModItems.BEDROCKIUM_ARROW);
                             entries.add(ModItems.BEDROCKIUM_BOW);
                             entries.add(ModItems.TRPPED_BEDROCKIUM_ARROW);
+                            entries.add(ModBlocks.TELEPORT_BLOCK);
                         }).build());
     }
 }

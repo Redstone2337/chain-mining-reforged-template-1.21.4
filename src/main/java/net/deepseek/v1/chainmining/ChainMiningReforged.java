@@ -22,13 +22,22 @@ import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ChainMiningReforged implements ModInitializer {
 	public static final String MOD_ID = "cmr";
 	public static final int MAX_SELECTION_SIZE = 100_000;
-
+	public static final int MAX_BLOCKS_PER_OPERATION = 100000;
+	public static BlockPos startPos = null;
+    public static BlockPos endPos = null;
+	public static BlockPos teleportPos = null;
+	public static boolean confirmed = false;
+	public static boolean isRunning = false;
+	public static Random random = Random.create();
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
@@ -87,5 +96,8 @@ public class ChainMiningReforged implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 	}
 
-
+	public static Direction getRandomSide() {
+		Direction[] sides = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST};
+		return sides[random.nextInt(sides.length)];
+	}
 }

@@ -17,6 +17,7 @@ public class ModItemTags {
     public static final TagKey<Item> BEDROCKIUM_TOOL_MATERIALS = of("bedrockium_tool_materials");
     public static final TagKey<Item> REPAIRS_BEDROCK_ARMOR = of("repairs_bedrock_armor");
     public static final TagKey<Item> REPAIRS_BEDROCKIUM_ARMOR = of("repairs_bedrockium_armor");
+    public static final TagKey<Item> SUPPORTED_ITEMS = of("supported_items");
 
     private static TagKey<Item> of(String id) {
         return TagKey.of(RegistryKeys.ITEM, Identifier.of(ChainMiningReforged.MOD_ID, id));
