@@ -18,6 +18,7 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 //        blockStateModelGenerator.registerSimpleState(ModBlocks.BEDROCKIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BEDROCKIUM_ORE);
+        blockStateModelGenerator.registerParented(ModBlocks.TELEPORT_BLOCK,ModBlocks.FUNC_TELEPORT_BLOCK);
     }
 
     @Override

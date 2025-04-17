@@ -10,18 +10,25 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.event.GeoRenderEvent;
 
 import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block BEDROCKIUM_ORE = register("bedrockium_ore", AbstractBlock.Settings.create()
+    public static final Block BEDROCKIUM_ORE = register("bedrockium_ore", Block::new, AbstractBlock.Settings.create()
             .mapColor(MapColor.BLUE)
             .instrument(NoteBlockInstrument.HARP)
             .requiresTool()
             .strength(10.0f,15.0f));
 
-    public static final Block TELEPORT_BLOCK = register("teleport_block",TeleportBlock::new, AbstractBlock.Settings.create()
+    public static final Block TELEPORT_BLOCK = register("teleport_block",Block::new, AbstractBlock.Settings.create()
+            .mapColor(MapColor.BLUE)
+            .instrument(NoteBlockInstrument.HARP)
+            .requiresTool()
+            .strength(10.0f,15.0f));
+
+    public static final Block FUNC_TELEPORT_BLOCK = register("func_teleport_block",TeleportBlock::new, AbstractBlock.Settings.create()
             .mapColor(MapColor.BLUE)
             .instrument(NoteBlockInstrument.HARP)
             .requiresTool()
