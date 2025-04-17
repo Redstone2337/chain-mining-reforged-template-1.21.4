@@ -4,6 +4,7 @@ import net.deepseek.v1.chainmining.ChainMiningReforged;
 import net.deepseek.v1.chainmining.core.armor.ModArmorMaterials;
 import net.deepseek.v1.chainmining.items.function.BedrockiumArrowItem;
 import net.deepseek.v1.chainmining.items.function.BedrockiumBowItem;
+import net.deepseek.v1.chainmining.items.function.IceClawItem;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -90,6 +91,12 @@ public class ModItems {
             (settings) -> new BedrockiumArrowItem(settings.maxCount(64).rarity(Rarity.EPIC)
                     .component(DataComponentTypes.TOOL,BedrockiumArrowItem.createToolComponent())
                     .attributeModifiers(BedrockiumArrowItem.createAttributeModifiers())
+            ));
+
+    public static final Item ICE_CLAW = register("ice_claw",
+            (settings) -> new IceClawItem(settings.maxCount(1).maxDamage(800000).rarity(Rarity.EPIC)
+                    .component(DataComponentTypes.TOOL, IceClawItem.createToolComponent())
+                    .attributeModifiers(IceClawItem.createAttributeModifiers())
             ));
 
     public static final Item TRPPED_BEDROCKIUM_ARROW = register("trpped_bedrockium_arrow",

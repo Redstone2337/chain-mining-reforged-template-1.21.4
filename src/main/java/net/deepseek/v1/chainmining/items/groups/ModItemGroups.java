@@ -38,6 +38,7 @@ public class ModItemGroups {
                             entries.add(ModItems.BEDROCK_LEGGINGS);
                             entries.add(ModItems.BEDROCK_BOOTS);
                             entries.add(ModItems.DIAMOND_STICK);
+                            entries.add(ModItems.ICE_CLAW);
 //                            entries.add(ModItems.VAMPIRE_TEMPLATE);
 //                            entries.add(ModItems.SLOWNESS_TEMPLATE);
                         }).build());

@@ -14,6 +14,7 @@ import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.deepseek.v1.chainmining.items.groups.ModItemGroups;
+import net.deepseek.v1.chainmining.tag.ModBlockTags;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
@@ -58,6 +59,7 @@ public class ChainMiningReforged implements ModInitializer {
 		ModEnchantments.register();
 		ModEnchantmentEffects.register();
 		ModItemTags.register();
+		ModBlockTags.register();
 		ConfigManager.initialize();
 		ModItems.register();
 		ModItemGroups.register();

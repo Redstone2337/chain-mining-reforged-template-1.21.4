@@ -43,5 +43,7 @@ public class ModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BEDROCKIUM_LEGGINGS,"Bedrockium Leggings");
         translationBuilder.add(ModItems.BEDROCKIUM_BOOTS,"Bedrockium Boots");
         translationBuilder.add(ModBlocks.BEDROCKIUM_ORE,"Bedrockium Ore");
+        translationBuilder.add(ModBlocks.TELEPORT_BLOCK,"Teleport Block");
+        translationBuilder.add(ModItems.ICE_CLAW,"Ice Claw");
     }
 }

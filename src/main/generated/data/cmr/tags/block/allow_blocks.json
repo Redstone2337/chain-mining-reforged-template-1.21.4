@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#minecraft:coal_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:deepslate_ore_replaceables",
+    "#minecraft:copper_ores",
+    "#minecraft:diamond_ores",
+    "#minecraft:emerald_ores",
+    "#minecraft:redstone_ores",
+    "#minecraft:lapis_ores",
+    "cmr:bedrockium_ore"
+  ]
+}
