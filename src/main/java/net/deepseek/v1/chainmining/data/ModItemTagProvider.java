@@ -41,7 +41,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.STONE_SWORD)
                 .add(Items.WOODEN_SWORD);
         getOrCreateTagBuilder(ModItemTags.ALL)
-                .addTags(
+                .forceAddTags(
                         ModItemTags.SWORD,
                         ModItemTags.PICKAXE,
                         ModItemTags.FUNCTION_LIST
@@ -83,6 +83,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                         ModItems.BEDROCKIUM_AXE,
                         ModItems.BEDROCK_HOE,
                         ModItems.BEDROCKIUM_HOE
+                );
+        getOrCreateTagBuilder(ModItemTags.SUPPORTED_ITEMS)
+                .forceAddTag(ItemTags.COAL_ORES)
+                .forceAddTag(ItemTags.IRON_ORES)
+                .forceAddTag(ItemTags.GOLD_ORES)
+                .add(ModItems.BEDROCK_STONE)
+                .add(ModItems.BEDROCKIUM_STONE)
+                .forceAddTag(ItemTags.COPPER_ORES)
+                .forceAddTag(ItemTags.DIAMOND_ORES)
+                .forceAddTag(ItemTags.EMERALD_ORES)
+                .forceAddTag(ItemTags.REDSTONE_ORES)
+                .forceAddTag(ItemTags.LAPIS_ORES)
+                .add(
+                        Items.STONE,
+                        Items.SMOOTH_STONE,
+                        Items.ANDESITE,
+                        Items.COBBLED_DEEPSLATE
                 );
     }
 }
