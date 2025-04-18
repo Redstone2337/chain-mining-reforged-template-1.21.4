@@ -16,8 +16,11 @@
     ---[<HomePos : Vec3>] `, - The effect is similar to /sethome, but this one returns to the last set home location.
 
 # Important Screenshots
+
 <div align="center">
-  <img src="Require.png" width="30%" alt="GeckoLib4">
+   
+  <img src="Require.png" width="50%" alt="GeckoLib4">
+  
 </div>
 
 # About Health Command:
