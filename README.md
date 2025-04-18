@@ -17,7 +17,7 @@
 
 # Important Screenshots
 <div align="center">
-  <img src="Require.jpg" width="30%" alt="GeckoLib4">
+  <img src="Require.png" width="30%" alt="GeckoLib4">
 </div>
 
 # About Health Command:
