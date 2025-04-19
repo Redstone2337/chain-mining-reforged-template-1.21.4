@@ -85,6 +85,7 @@ public class ChainMiningReforged implements ModInitializer {
 			SetCommand.register(commandDispatcher, commandRegistryAccess);
 			TestCommand.register(commandDispatcher, commandRegistryAccess);
 			RedstoneCommand.register(commandDispatcher);
+			VMinerCommand.register(commandDispatcher);
 		});
 
 		// 客户端渲染注册
