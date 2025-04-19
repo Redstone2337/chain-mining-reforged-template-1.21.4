@@ -157,6 +157,49 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                         .input('Y', Items.NETHERITE_SCRAP)
                         .criterion("has_item", conditionsFromItem(ModItems.BEDROCK_STONE))
                         .offerTo(recipeExporter);
+
+                createShaped(RecipeCategory.COMBAT,ModItems.BEDROCKIUM_BOW,1)
+                        .pattern(" AB")
+                        .pattern("A B")
+                        .pattern(" AB")
+                        .input('A',ModItems.DIAMOND_STICK)
+                        .input('B',Items.STRING)
+                        .criterion("has_item",conditionsFromItem(ModItems.DIAMOND_STICK))
+                        .offerTo(recipeExporter);
+
+                createShaped(RecipeCategory.MISC,ModItems.BEDROCKIUM_ARROW,1)
+                        .pattern("AAA")
+                        .pattern("ABA")
+                        .pattern("AAA")
+                        .input('A',ModItems.BEDROCKIUM_STONE)
+                        .input('B',Items.ARROW)
+                        .criterion("has_item",conditionsFromItem(ModItems.BEDROCKIUM_STONE))
+                        .offerTo(recipeExporter);
+
+                createShapeless(RecipeCategory.MISC,ModItems.TRPPED_BEDROCKIUM_ARROW,4)
+                        .input(DefaultCustomIngredients.any(
+                                Ingredient.ofItem(ModItems.BEDROCK_STONE),
+                                Ingredient.ofItem(ModItems.BEDROCK_STONE),
+                                Ingredient.ofItem(ModItems.BEDROCK_STONE),
+                                Ingredient.ofItem(ModItems.BEDROCKIUM_STONE),
+                                Ingredient.ofItem(ModItems.BEDROCKIUM_ARROW)
+                        ))
+                        .criterion("has_bedrockium_arrow",conditionsFromItem(ModItems.BEDROCKIUM_ARROW))
+                        .offerTo(recipeExporter);
+
+                createShaped(RecipeCategory.COMBAT,ModItems.ICE_CLAW,1)
+                        .pattern("ABC")
+                        .pattern("DEF")
+                        .pattern(" G ")
+                        .input('A',Items.IRON_SWORD)
+                        .input('B',Items.GOLDEN_SWORD)
+                        .input('C',Items.DIAMOND_SWORD)
+                        .input('D',Items.STONE_SWORD)
+                        .input('E',Items.WOODEN_SWORD)
+                        .input('F',Items.NETHERITE_SWORD)
+                        .input('G',ModItems.DIAMOND_STICK)
+                        .criterion("has_diamond_stick",conditionsFromItem(ModItems.DIAMOND_STICK))
+                        .offerTo(recipeExporter);
             }
         };
     }

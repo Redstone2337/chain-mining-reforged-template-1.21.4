@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ice_claw.new": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.2152,
+			"bones": {
+				"3": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5607": {
+							"vector": [0, 64.17, 0]
+						},
+						"0.8411": {
+							"vector": [0, 195, 0]
+						},
+						"1.028": {
+							"vector": [0, 201.67, 0]
+						},
+						"1.215": {
+							"vector": [0, 177.5, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

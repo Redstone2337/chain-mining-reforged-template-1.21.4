@@ -1,5 +1,6 @@
 // 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/Model Definitions
 b4bd50a041790c4529a275938bae2cb9c4565008 assets/cmr/blockstates/bedrockium_ore.json
+5734cb367f942c6ee2dc67492389f8df8f048d5b assets/cmr/blockstates/func_teleport_block.json
 560c412c4660451ed7bc61d0a1f1fa52f36b95df assets/cmr/items/bedrock_axe.json
 0eaddc933d7849b8984cff02fff429060aa83a4d assets/cmr/items/bedrock_boots.json
 90c053fce1586978cab34d3947600fa7c3722ce8 assets/cmr/items/bedrock_chestplate.json
@@ -21,6 +22,7 @@ a5fcc1e9deb0455f0dd6928c17b1405eafb56ada assets/cmr/items/bedrockium_leggings.js
 a1127f5232861bdce96d4f4879e0efd1867c2c45 assets/cmr/items/bedrockium_stone.json
 96c1767d789ecaf7c915b5e3859ad2820711e0e3 assets/cmr/items/bedrockium_sword.json
 838de489a724d55552e32a04873fa2edfa4b7654 assets/cmr/items/diamond_stick.json
+24f2c95e5b17cf1f3b4fd57a5cb498f1741fb7dd assets/cmr/items/func_teleport_block.json
 24f2c95e5b17cf1f3b4fd57a5cb498f1741fb7dd assets/cmr/items/teleport_block.json
 195c331d8938e101fcbc788117522ec112ca3a18 assets/cmr/items/trpped_bedrockium_arrow.json
 12f19d0e4257951e480f1a0904931effa2447ee8 assets/cmr/models/block/bedrockium_ore.json

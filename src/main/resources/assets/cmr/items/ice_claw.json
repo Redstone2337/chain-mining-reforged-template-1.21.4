@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "cmr:item/ice_claw",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

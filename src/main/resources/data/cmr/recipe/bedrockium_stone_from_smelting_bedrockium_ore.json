@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.3,
+  "group": "cmr:ores",
+  "ingredient": "cmr:bedrockium_ore",
+  "result": {
+    "id": "cmr:bedrockium_stone"
+  }
+}
