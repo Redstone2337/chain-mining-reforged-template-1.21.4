@@ -22,17 +22,17 @@ public class ModBlocks {
             .requiresTool()
             .strength(10.0f,15.0f));
 
-    public static final Block TELEPORT_BLOCK = register("teleport_block",Block::new, AbstractBlock.Settings.create()
+    public static final Block TELEPORT_BLOCK = register("teleport_block",TeleportBlock::new, AbstractBlock.Settings.create()
             .mapColor(MapColor.BLUE)
             .instrument(NoteBlockInstrument.HARP)
             .requiresTool()
             .strength(10.0f,15.0f));
 
-    public static final Block FUNC_TELEPORT_BLOCK = register("func_teleport_block",TeleportBlock::new, AbstractBlock.Settings.create()
-            .mapColor(MapColor.BLUE)
-            .instrument(NoteBlockInstrument.HARP)
-            .requiresTool()
-            .strength(10.0f,15.0f));
+//    public static final Block FUNC_TELEPORT_BLOCK = register("func_teleport_block",TeleportBlock::new, AbstractBlock.Settings.create()
+//            .mapColor(MapColor.BLUE)
+//            .instrument(NoteBlockInstrument.HARP)
+//            .requiresTool()
+//            .strength(10.0f,15.0f));
 
     private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(ChainMiningReforged.MOD_ID, id));
