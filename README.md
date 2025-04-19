@@ -15,6 +15,12 @@
    - `/back [<HomePos>]
     ---[<HomePos : Vec3>] `, - The effect is similar to /sethome, but this one returns to the last set home location.
 
+# Required GeckoLib 4
+
+<div align="center">
+  <img src="Require.png" width="50%" alt="GeckoLib4">
+</div>
+
 # About Health Command:
 ### Command Descriptions:
 1. **Basic Commands**:

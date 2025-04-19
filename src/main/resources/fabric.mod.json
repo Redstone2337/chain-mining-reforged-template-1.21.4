@@ -37,7 +37,8 @@
 		"minecraft": "~1.21.4",
 		"java": ">=21",
 		"fabric-api": ">=0.118.0+1.21.4",
-		"cloth-config": ">=17.0.142"
+		"cloth-config": ">=17.0.142",
+		"geckolib": ">=4.8.2"
 	},
 	"suggests": {
 		"modmenu": ">=13.0.0"
