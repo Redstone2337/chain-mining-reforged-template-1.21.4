@@ -1,13 +1,16 @@
 package net.deepseek.v1.chainmining.data;
 
+import net.deepseek.v1.chainmining.ChainMiningReforged;
 import net.deepseek.v1.chainmining.blocks.ModBlocks;
+import net.deepseek.v1.chainmining.blocks.TeleportBlock;
 import net.deepseek.v1.chainmining.core.armor.ModEquipmentAssetKeys;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.block.Block;
+import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 public class ModModelsProvider extends FabricModelProvider {
     public ModModelsProvider(FabricDataOutput output) {
@@ -19,7 +22,28 @@ public class ModModelsProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerSimpleState(ModBlocks.BEDROCKIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BEDROCKIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TELEPORT_BLOCK);
+//        CustomBlockStateModelGenerator.createVerticalBlockStates(
+//                ModBlocks.TELEPORT_BLOCK,
+//                Identifier.of(ChainMiningReforged.MOD_ID, "block/teleport_block"),
+//                Identifier.of(ChainMiningReforged.MOD_ID, "block/teleport_block")
+//        );
     }
+
+//    public static class CustomBlockStateModelGenerator {
+//        private static BlockStateSupplier createVerticalBlockStates(Block vertBlock, Identifier vertId, Identifier fullBlockId) {
+//            VariantSetting<Boolean> uvlock = VariantSettings.UVLOCK;
+//            VariantSetting<VariantSettings.Rotation> yRot = VariantSettings.Y;
+//            return VariantsBlockStateSupplier.create(vertBlock).coordinate(BlockStateVariantMap.create(TeleportBlock.FACING,TeleportBlock.SINGLE)
+//                    .register(Direction.NORTH, true, BlockStateVariant.create().put(VariantSettings.MODEL, vertId).put(uvlock, true))
+//                    .register(Direction.EAST, true, BlockStateVariant.create().put(VariantSettings.MODEL, vertId).put(uvlock, true).put(yRot, VariantSettings.Rotation.R90))
+//                    .register(Direction.SOUTH, true, BlockStateVariant.create().put(VariantSettings.MODEL, vertId).put(uvlock, true).put(yRot, VariantSettings.Rotation.R180))
+//                    .register(Direction.WEST, true, BlockStateVariant.create().put(VariantSettings.MODEL, vertId).put(uvlock, true).put(yRot, VariantSettings.Rotation.R270))
+//                    .register(Direction.NORTH, false, BlockStateVariant.create().put(VariantSettings.MODEL, fullBlockId).put(uvlock, true))
+//                    .register(Direction.EAST, false, BlockStateVariant.create().put(VariantSettings.MODEL, fullBlockId).put(uvlock, true))
+//                    .register(Direction.SOUTH, false, BlockStateVariant.create().put(VariantSettings.MODEL, fullBlockId).put(uvlock, true))
+//                    .register(Direction.WEST, false, BlockStateVariant.create().put(VariantSettings.MODEL, fullBlockId).put(uvlock, true)));
+//        }
+//    }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
