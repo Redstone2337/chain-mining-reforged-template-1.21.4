@@ -10,6 +10,7 @@ import net.deepseek.v1.chainmining.config.ModConfig;
 import net.deepseek.v1.chainmining.core.config.ConfigManager;
 import net.deepseek.v1.chainmining.core.data.PlayerSelectionData;
 import net.deepseek.v1.chainmining.core.entities.ModEnchantmentEffects;
+import net.deepseek.v1.chainmining.core.recipes.loaders.BrewingRecipeLoader;
 import net.deepseek.v1.chainmining.core.render.SelectionRenderer;
 import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
@@ -23,7 +24,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.resource.ResourceType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -66,6 +69,10 @@ public class ChainMiningReforged implements ModInitializer {
 		ModItemGroups.register();
 		ModBlocks.register();
 		ModBlockEntities.register();
+
+		ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(
+				new BrewingRecipeLoader()
+		);
 
 		// 注册事件监听
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {

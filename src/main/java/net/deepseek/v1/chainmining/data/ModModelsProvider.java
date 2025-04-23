@@ -21,7 +21,7 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 //        blockStateModelGenerator.registerSimpleState(ModBlocks.BEDROCKIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BEDROCKIUM_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TELEPORT_BLOCK);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.TELEPORT_BLOCK);
 //        CustomBlockStateModelGenerator.createVerticalBlockStates(
 //                ModBlocks.TELEPORT_BLOCK,
 //                Identifier.of(ChainMiningReforged.MOD_ID, "block/teleport_block"),
@@ -58,6 +58,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BEDROCK_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BEDROCKIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BEDROCKIUM_PICKAXE, Models.HANDHELD);
+//        itemModelGenerator.register(ModItems.BEDROCKIUM_ARROW,Models.GENERATED);
 
         itemModelGenerator.registerArmor(ModItems.BEDROCK_HELMET, ModEquipmentAssetKeys.BEDROCK_ASSET,"bedrock_helmet",true);
         itemModelGenerator.registerArmor(ModItems.BEDROCK_CHESTPLATE, ModEquipmentAssetKeys.BEDROCK_ASSET,"bedrock_chestplate",true);

@@ -2,12 +2,12 @@
   "layers": {
     "humanoid": [
       {
-        "texture": "cmr:bedrockium_armor"
+        "texture": "cmr:bedrock"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "cmr:bedrockium_armor"
+        "texture": "cmr:bedrock"
       }
     ]
   }
