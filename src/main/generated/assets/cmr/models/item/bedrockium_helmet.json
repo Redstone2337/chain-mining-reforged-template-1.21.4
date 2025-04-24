@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cmr:item/bedrockium_helmet",
-    "layer1": "cmr:item/bedrockium_helmet_overlay"
+    "layer0": "cmr:item/bedrockium_helmet"
   }
 }

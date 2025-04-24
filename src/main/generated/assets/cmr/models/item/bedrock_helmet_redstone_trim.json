@@ -2,7 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "cmr:item/bedrock_helmet",
-    "layer1": "cmr:item/bedrock_helmet_overlay",
-    "layer2": "minecraft:trims/items/bedrock_helmet_trim_redstone"
+    "layer1": "minecraft:trims/items/bedrock_helmet_trim_redstone"
   }
 }
