@@ -18,7 +18,7 @@ public class ModEquipmentModelProvider extends EquipmentAssetProvider {
 
     public ModEquipmentModelProvider(DataOutput output) {
         super(output);
-        this.pathResolver = output.getResolver(DataOutput.OutputType.RESOURCE_PACK, "models/equipment");
+        this.pathResolver = output.getResolver(DataOutput.OutputType.RESOURCE_PACK, "cmr/equipment");
     }
 
     @Override
