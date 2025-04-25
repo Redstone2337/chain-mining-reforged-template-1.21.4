@@ -34,7 +34,7 @@ public interface ModEquipmentAssetKeys {
     }
 
     static RegistryKey<EquipmentAsset> register(String name) {
-        return RegistryKey.of(REGISTRY_KEY, Identifier.ofVanilla(name));
+        return RegistryKey.of(REGISTRY_KEY, Identifier.of(ChainMiningReforged.MOD_ID,name));
     }
 }
 
