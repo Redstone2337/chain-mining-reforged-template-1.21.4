@@ -12,25 +12,19 @@ import java.util.function.BiConsumer;
 import static net.minecraft.item.equipment.EquipmentAssetKeys.REGISTRY_KEY;
 
 public interface ModEquipmentAssetKeys {
-    Identifier BEDROCK = Identifier.of(ChainMiningReforged.MOD_ID, "bedrock");
-    Identifier BEDROCKIUM = Identifier.of(ChainMiningReforged.MOD_ID, "bedrockium");
-
-
-    EquipmentModel BEDROCK_MODEL = buildHumanoid("bedrock");
-    EquipmentModel BEDROCKIUM_MODEL = buildHumanoid("bedrockium");
 
     RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.of(ChainMiningReforged.MOD_ID,"equipment"));
     RegistryKey<EquipmentAsset> BEDROCK_ASSET = register("bedrock");
     RegistryKey<EquipmentAsset> BEDROCKIUM_ASSET = register("bedrockium");
     RegistryKey<EquipmentAsset> BEDROCKIUM_ARROW = register("bedrockium_arrow");
 
-    static void accept(BiConsumer<Identifier, EquipmentModel> equipmentModelBiConsumer) {
-        equipmentModelBiConsumer.accept(BEDROCK, BEDROCK_MODEL);
-        equipmentModelBiConsumer.accept(BEDROCKIUM, BEDROCKIUM_MODEL);
+    static void accept(BiConsumer<RegistryKey<EquipmentAsset>, EquipmentModel> equipmentBiConsumer) {
+        equipmentBiConsumer.accept(BEDROCK_ASSET, createHumanoidOnlyModel("bedrock"));
+        equipmentBiConsumer.accept(BEDROCKIUM_ASSET, createHumanoidOnlyModel("bedrockium"));
     }
 
-    private static EquipmentModel buildHumanoid(String path) {
-        return EquipmentModel.builder().addHumanoidLayers(Identifier.of(ChainMiningReforged.MOD_ID, path)).build();
+    static EquipmentModel createHumanoidOnlyModel(String id) {
+        return EquipmentModel.builder().addHumanoidLayers(Identifier.of(ChainMiningReforged.MOD_ID, id)).build();
     }
 
     static RegistryKey<EquipmentAsset> register(String name) {
