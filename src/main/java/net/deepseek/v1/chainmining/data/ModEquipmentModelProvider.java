@@ -8,7 +8,6 @@ import net.minecraft.data.DataProvider;
 import net.minecraft.data.DataWriter;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
 import java.util.Map;
