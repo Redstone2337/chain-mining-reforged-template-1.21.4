@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "credit": "Made with Blockbench",
-		"textures": {
+"textures": {
     "layer0": "cmr:item/ice_claw"
   },
   "texture_size": [
