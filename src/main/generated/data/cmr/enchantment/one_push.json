@@ -1,0 +1,32 @@
+{
+  "anvil_cost": 5,
+  "description": {
+    "translate": "enchantment.cmr.one_push"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "cmr:one_push"
+        },
+        "enchanted": "attacker"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 2,
+    "per_level_above_first": 4
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 5
+  },
+  "primary_items": "#cmr:function_list",
+  "slots": [
+    "hand"
+  ],
+  "supported_items": "#cmr:sword",
+  "weight": 10
+}

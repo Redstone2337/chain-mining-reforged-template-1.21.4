@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cmr:item/bedrockium_boots",
+    "layer1": "minecraft:trims/items/bedrockium_boots_trim_copper"
+  }
+}

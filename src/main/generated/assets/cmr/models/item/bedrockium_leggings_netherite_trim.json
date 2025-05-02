@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cmr:item/bedrockium_leggings",
+    "layer1": "minecraft:trims/items/bedrockium_leggings_trim_netherite"
+  }
+}

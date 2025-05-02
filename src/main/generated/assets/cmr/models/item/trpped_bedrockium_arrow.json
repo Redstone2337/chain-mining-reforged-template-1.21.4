@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cmr:item/trpped_bedrockium_arrow_head",
+    "layer1": "cmr:item/trpped_bedrockium_arrow_base"
+  }
+}

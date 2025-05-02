@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "cmr:bedrockium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "cmr:bedrockium"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+// 1.21.4	-999999999-01-01T00:00:00	Chain Mining Reforged/Tags for minecraft:item
+a2ba2016718bc95b5c4bb5d8e083173c3739c7ca data/cmr/tags/item/all_mod_tag.json
+25fff84749723871cba1853214f4bedd0c75a209 data/cmr/tags/item/bedrock_tool_materials.json
+66fae69b70b899858be9af8910320a96f73e743c data/cmr/tags/item/bedrockium_tool_materials.json
+d1296d7e2cb1321ecd475835492c9f44f96ef31a data/cmr/tags/item/function_list.json
+40fb4656d596462242786e50a37346b920a3c5c8 data/cmr/tags/item/pickaxe.json
+25fff84749723871cba1853214f4bedd0c75a209 data/cmr/tags/item/repairs_bedrock_armor.json
+66fae69b70b899858be9af8910320a96f73e743c data/cmr/tags/item/repairs_bedrockium_armor.json
+1241a6dcd84af00218a454232965495e10eb609f data/cmr/tags/item/supported_items.json
+4ff0103316b33a9b5b29591ac0cc2f57f72dae5b data/cmr/tags/item/sword.json
+66a017a49226daad1273363805ae5c9ff98e747f data/minecraft/tags/item/enchantable/armor.json
+e3d6121f3ede800873985430e94fae257ca20337 data/minecraft/tags/item/enchantable/mining.json
+7065b74a61ccc0805df97f41b5a6e8e18c4513f2 data/minecraft/tags/item/enchantable/weapon.json
