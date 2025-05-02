@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cmr:item/bedrockium_chestplate",
-    "layer1": "minecraft:trims/items/bedrockium_chestplate_trim_diamond"
-  }
-}

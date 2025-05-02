@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cmr:item/bedrock_leggings",
-    "layer1": "minecraft:trims/items/bedrock_leggings_trim_diamond"
-  }
-}

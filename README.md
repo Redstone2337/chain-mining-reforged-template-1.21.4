@@ -18,7 +18,7 @@
 # Required GeckoLib 4
 
 <div align="center">
-  <img src="Require.png" width="50%" alt="GeckoLib4">
+  <img src="Require.png" width="500" alt="GeckoLib4">
 </div>
 
 # About Health Command:

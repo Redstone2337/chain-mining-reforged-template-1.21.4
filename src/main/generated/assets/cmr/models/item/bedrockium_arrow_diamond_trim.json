@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cmr:item/bedrockium_arrow",
-    "layer1": "minecraft:trims/items/bedrockium_arrow_trim_diamond"
-  }
-}
