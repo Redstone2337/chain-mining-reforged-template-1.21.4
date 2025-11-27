@@ -1,11 +1,12 @@
 package net.deepseek.v1.chainmining;
 
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.deepseek.v1.chainmining.blocks.ModBlocks;
 import net.deepseek.v1.chainmining.blocks.entities.ModBlockEntities;
 import net.deepseek.v1.chainmining.command.*;
 import net.deepseek.v1.chainmining.command.HealthCommand;
+import net.deepseek.v1.chainmining.config.ClientConfig;
+import net.deepseek.v1.chainmining.config.CommonConfig;
 import net.deepseek.v1.chainmining.config.ModConfig;
 import net.deepseek.v1.chainmining.core.config.ConfigManager;
 import net.deepseek.v1.chainmining.core.data.PlayerSelectionData;
@@ -16,6 +17,8 @@ import net.deepseek.v1.chainmining.enchantments.ModEnchantments;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
 import net.deepseek.v1.chainmining.items.ModItems;
 import net.deepseek.v1.chainmining.items.groups.ModItemGroups;
+import net.deepseek.v1.chainmining.manager.ItemClearManager;
+import net.deepseek.v1.chainmining.network.HomeNetworkHandler;
 import net.deepseek.v1.chainmining.tag.ModBlockTags;
 import net.deepseek.v1.chainmining.tag.ModItemTags;
 import net.fabricmc.api.EnvType;
@@ -27,6 +30,7 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resource.ResourceType;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -43,6 +47,7 @@ public class ChainMiningReforged implements ModInitializer {
 	public static boolean confirmed = false;
 	public static boolean isRunning = false;
 	public static Random random = Random.create();
+    private static ItemClearManager itemClearManager;
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
@@ -59,27 +64,57 @@ public class ChainMiningReforged implements ModInitializer {
 		// Proceed with mild caution.
 
 		// 注册配置
-		AutoConfig.register(ModConfig.class, Toml4jConfigSerializer::new);
+        LOGGER.info("开始初始化公告模组内容...");
+        long startTime = System.currentTimeMillis();
+//		AutoConfig.register(ModConfig.class, Toml4jConfigSerializer::new);
 		ModEnchantments.register();
+        LOGGER.info("自定义附魔注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModEnchantmentEffects.register();
+        LOGGER.info("自定义附魔效果注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModItemTags.register();
+        LOGGER.info("自定义物品标签注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModBlockTags.register();
+        LOGGER.info("自定义方块标签注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ConfigManager.initialize();
+        LOGGER.info("配置管理器初始化完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModItems.register();
+        LOGGER.info("自定义物品注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModItemGroups.register();
+        LOGGER.info("自定义物品组注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModBlocks.register();
+        LOGGER.info("自定义方块注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 		ModBlockEntities.register();
+        LOGGER.info("自定义方块实体注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
+        ClientConfig.init();
+        LOGGER.info("客户端配置初始化完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
+        CommonConfig.init();
+        LOGGER.info("通用配置初始化完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
+        HomeNetworkHandler.initialize();
+        LOGGER.info("网络处理器初始化完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
 
 		ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(
 				new BrewingRecipeLoader()
 		);
+        LOGGER.info("酿造配方加载器注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
 
 		// 注册事件监听
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
 			BlockBreakHandler handler = new BlockBreakHandler();
 			handler.afterBlockBreak(world, player, pos, state, blockEntity);
 		});
-
+        LOGGER.info("方块破坏事件监听器注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
 
 		CommandRegistrationCallback.EVENT.register((commandDispatcher, commandRegistryAccess, registrationEnvironment) -> {
 //			commandDispatcher.register(ChainMiningCommands.register(commandRegistryAccess));
@@ -94,19 +129,45 @@ public class ChainMiningReforged implements ModInitializer {
 			RedstoneCommand.register(commandDispatcher);
 			VMinerCommand.register(commandDispatcher);
 		});
+        LOGGER.info("命令注册完成，总耗时{}ms", System.currentTimeMillis() - startTime);
 
 		// 客户端渲染注册
-		        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
-					SelectionRenderer.register();
-				}
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            SelectionRenderer.register();
+        }
+        LOGGER.info("客户端渲染注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
 
 				        // 服务器关闭时清理数据
-		        ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
-					PlayerSelectionData.clearAll();
-				});
+//		        ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
+//					PlayerSelectionData.clearAll();
+//				});
 
+        // 初始化清理管理器
+        itemClearManager = new ItemClearManager();
+
+        // 注册服务器生命周期事件
+        ServerLifecycleEvents.SERVER_STARTING.register(this::onServerStarting);
+        ServerLifecycleEvents.SERVER_STOPPING.register(this::onServerStopping);
+        LOGGER.info("服务器生命周期事件注册完成，耗时{}ms", System.currentTimeMillis() - startTime);
+
+        LOGGER.info("连锁模组初始化完成，总耗时{}ms", System.currentTimeMillis() - startTime);
 		LOGGER.info("Hello Fabric world!");
 	}
+
+    private void onServerStarting(MinecraftServer server) {
+        // 服务器启动时开始清理任务
+        itemClearManager.startClearTask(server);
+    }
+
+    private void onServerStopping(MinecraftServer server) {
+        PlayerSelectionData.clearAll();
+        // 服务器停止时停止清理任务
+        itemClearManager.stopClearTask();
+    }
+
+    public static ItemClearManager getItemClearManager() {
+        return itemClearManager;
+    }
 
 	public static Direction getRandomSide() {
 		Direction[] sides = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST};

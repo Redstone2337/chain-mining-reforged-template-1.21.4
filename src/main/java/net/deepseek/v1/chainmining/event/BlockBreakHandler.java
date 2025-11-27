@@ -1,9 +1,7 @@
 package net.deepseek.v1.chainmining.event;
 
-import net.deepseek.v1.chainmining.ChainMiningReforged;
-import net.deepseek.v1.chainmining.config.ModConfig;
+import net.deepseek.v1.chainmining.config.CommonConfig;
 import net.deepseek.v1.chainmining.core.keys.ModKeys;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -13,11 +11,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class BlockBreakHandler {
@@ -37,24 +35,23 @@ public class BlockBreakHandler {
     public void afterBlockBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity) {
         if (world.isClient()) return;
 
-        ModConfig config = ChainMiningReforged.getConfig();
-        if (!config.enabled) return;
+        if (!CommonConfig.isEnabled()) return;
 
         // 获取玩家手中的工具
         ItemStack toolStack = player.getMainHandStack();
 
         // 检查工具类型
-        if (!isToolAllowed(toolStack, config.allowedTools)) return;
+        if (!isToolAllowed(toolStack, CommonConfig.getAllowedTools())) return;
 
         // 检查按键
         if (!ModKeys.getChainMiningReforgedKey().wasPressed()) return;
 
         // 检查方块是否允许
-        if (!isBlockAllowed(state.getBlock(), config)) return;
+        if (!isBlockAllowed(state.getBlock())) return;
 
         // 执行连锁采集
         processedBlocks.clear();
-        mineConnectedBlocks(world, player, pos, state.getBlock(), toolStack, config.maxChainCount);
+        mineConnectedBlocks(world, player, pos, state.getBlock(), toolStack, CommonConfig.getMaxChainCount());
     }
 
     private void mineConnectedBlocks(World world, PlayerEntity player, BlockPos pos, Block targetBlock, ItemStack toolStack, int maxCount) {
@@ -77,7 +74,7 @@ public class BlockBreakHandler {
         BlockState state = world.getBlockState(pos);
         if (player.canHarvest(state)) {
             world.breakBlock(pos, true, player);
-            toolStack.damage((int) ChainMiningReforged.getConfig().durabilityMultiplier, player,
+            toolStack.damage((int) CommonConfig.getDurabilityMultiplier(), player,
                     EquipmentSlot.MAINHAND);
             return true;
         }
@@ -85,7 +82,7 @@ public class BlockBreakHandler {
     }
 
     // 辅助方法 1：判断工具类型是否允许
-    private boolean isToolAllowed(ItemStack stack, String[] allowedTools) {
+    private boolean isToolAllowed(ItemStack stack, List<? extends String> allowedTools) {
         if (stack.getItem() instanceof Item) {
             String toolType = stack.getItem().toString().toLowerCase();
             for (String allowed : allowedTools) {
@@ -105,24 +102,16 @@ public class BlockBreakHandler {
     }
 
     // 辅助方法 3：判断方块是否允许
-    private boolean isBlockAllowed(Block block, ModConfig config) {
+    private boolean isBlockAllowed(Block block) {
         String blockId = Registries.BLOCK.getId(block).toString();
-        if (config.useBlockWhitelist) {
+        if (CommonConfig.isUseBlockWhitelist()) {
             // 白名单模式：仅允许列表中的方块
-//            for (String allowed : config.defaultAllowedBlocks) {
-//                if (blockId.equals(allowed)) {
-//                    return true;
-//                }
-//            }
-            return config.defaultAllowedBlocks.contains(blockId) || config.customAllowedBlocks.contains(blockId);
+            return CommonConfig.getDefaultAllowedBlocks().contains(blockId) ||
+                    CommonConfig.getCustomAllowedBlocks().contains(blockId);
         } else {
             // 黑名单模式：仅禁止列表中的方块
-//            for (String denied : config.defaultDeniedBlocks) {
-//                if (blockId.equals(denied)) {
-//                    return false;
-//                }
-//            }
-            return !config.defaultDeniedBlocks.contains(blockId) && !config.customDeniedBlocks.contains(blockId);
+            return !CommonConfig.getDefaultDeniedBlocks().contains(blockId) &&
+                    !CommonConfig.getCustomDeniedBlocks().contains(blockId);
         }
     }
 

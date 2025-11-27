@@ -1,6 +1,6 @@
 package net.deepseek.v1.chainmining;
 
-import net.deepseek.v1.chainmining.config.ModConfig;
+import net.deepseek.v1.chainmining.config.CommonConfig;
 import net.deepseek.v1.chainmining.core.keys.ModKeys;
 import net.deepseek.v1.chainmining.event.BlockBreakHandler;
 import net.fabricmc.api.ClientModInitializer;
@@ -17,12 +17,10 @@ import static net.deepseek.v1.chainmining.core.keys.ModKeys.*;
 
 public class ChainMiningReforgedClient implements ClientModInitializer {
     private static boolean isWaitingForConfirmation = false;
-    private static ModConfig config;
 
     @Override
     public void onInitializeClient() {
         ModKeys.init();
-
 
         ClientTickEvents.END_CLIENT_TICK.register(minecraftClient -> {
             while (ModKeys.getChainMiningReforgedKey().wasPressed()) {
@@ -48,7 +46,7 @@ public class ChainMiningReforgedClient implements ClientModInitializer {
     }
 
     private void spawnTadpoles(PlayerEntity player) {
-        int count = Math.min(config.spawnNormalCount, config.spawnMaxCount);
+        int count = Math.min(CommonConfig.getSpawnNormalCount(), CommonConfig.getSpawnMaxCount());
         count = Math.min(count, 100);
 
         World world = player.getWorld();
@@ -65,22 +63,12 @@ public class ChainMiningReforgedClient implements ClientModInitializer {
             TadpoleEntity tadpole = EntityType.TADPOLE.create(world,null);
             if (tadpole != null) {
                 tadpole.refreshPositionAndAngles(spawnPos, 0, 0);
-                //world.spawnEntity(tadpole);
                 if (world.getBlockState(spawnPos).isAir()) {
                     world.spawnEntity(tadpole);
                 }
-                // 在生成后立即检查蝌蚪是否在陆地上
-            /*
-            if (!tadpole.isTouchingWater()) {
-                // 给蝌蚪添加短暂的生命时间或立即消失
-                tadpole.setInvulnerable(true);
-                tadpole.setDespawnImmediately();
-            }
-            */
             }
         }
 
         player.sendMessage(Text.of("已生成 " + count + " 只小蝌蚪!"), false);
     }
 }
-

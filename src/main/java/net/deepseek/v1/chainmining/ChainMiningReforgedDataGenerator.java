@@ -20,7 +20,8 @@ public class ChainMiningReforgedDataGenerator implements DataGeneratorEntrypoint
 		pack.addProvider(ModModelsProvider::new);
 		pack.addProvider(ModRecipesProvider::new);
 		pack.addProvider(ModLootTablesProvider::new);
-//		pack.addProvider(ModEnglishLanguageProvider::new);
+		pack.addProvider(ModEnglishLanguageProvider::new);
+        pack.addProvider(ModChineseLanguageProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
 		pack.addProvider(ModBlockTagProvider::new);
 

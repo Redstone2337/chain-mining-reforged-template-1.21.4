@@ -37,6 +37,30 @@
    - `/health modify <target> <operation> <value>` - Perform a health operation on the target.
    - `/health modify <target> <operation> <value> distance <x> <y> <z> <radius>` - Perform the operation within a specified area.
 
+### Reconstructed content
+1. **Home Command**：
+   - `/sethome` - The command is refactored this time.
+   - `/back` - This one is also reconstructed.
+   > Note: Coordinate acqt the same time. compatible with multiple people at the same time. compatible with multiple people at the same time.
+   
+2. **Automatic cleaning**:
+   - Add automatic cleaning function.
+   - It can be modified through the configuration file.
+   - The default is automatic cleanup after 5 minutes.
+   > Note: The automatic cleaning function is not currently enabled by default. You need to enable it in the configuration file.
+
+3. **Config File**
+   - Add a Common configuration file.
+   - Add a Client configuration file.
+   > Note: The configuration file is located in the `config` folder.
+   >> **Automatic Cleaning Settings**
+    >- `isClearServerItem` - Turn automatic cleaning on and off.
+    >- `displayTextHead` - The text header used to set the end of cleanup.
+    >- `displayTextBody` - The text body used to set the end of cleanup.
+    >- `displayCountdownText` - The countdown text used to set the end of cleanup.
+    >> Note: More configurations can be found in the game.
+
+
 ### Examples:
 1. **Area Healing**:
    ```
@@ -55,3 +79,7 @@
    /execute as @a at @s run health modify @s remove 2 distance ~ ~ ~ 5
    ```
    - Continuously drain health from each player within a 5-block radius (requires a looping command block).
+
+
+> [!WARNING]
+> Warning： The current module is a test version and may throw an exception at any time.

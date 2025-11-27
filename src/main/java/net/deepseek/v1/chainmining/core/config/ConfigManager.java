@@ -1,42 +1,34 @@
 package net.deepseek.v1.chainmining.core.config;
 
-// ConfigManager.java
-import me.shedaniel.autoconfig.AutoConfig;
-import net.deepseek.v1.chainmining.config.ModConfig;
-import net.minecraft.client.gui.screen.Screen;
+import net.deepseek.v1.chainmining.config.CommonConfig;
 
 public class ConfigManager {
-    private static ModConfig config;
 
     public static void initialize() {
-        config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+        // 初始化已经在 CommonConfig.init() 中完成
     }
 
     public static int getMaxPowerDistance() {
-        return config.maxPowerDistance;
+        return CommonConfig.getMaxPowerDistance();
     }
 
     public static int getCurrentPowerDistance() {
-        return config.currentPowerDistance;
+        return CommonConfig.getCurrentPowerDistance();
     }
 
     public static void setMaxPowerDistance(int value) {
-        config.maxPowerDistance = Math.max(1, value);
+        CommonConfig.setMaxPowerDistance(value);
         // 确保当前值不超过新最大值
-        config.currentPowerDistance = Math.min(config.currentPowerDistance, config.maxPowerDistance);
-        AutoConfig.getConfigHolder(ModConfig.class).save();
+        int current = CommonConfig.getCurrentPowerDistance();
+        if (current > value) {
+            CommonConfig.setCurrentPowerDistance(value);
+        }
     }
 
     public static void setPowerDistance(int value) {
-        config.currentPowerDistance = Math.min(value, config.maxPowerDistance);
-        AutoConfig.getConfigHolder(ModConfig.class).save();
+        CommonConfig.setCurrentPowerDistance(value);
     }
 
-    public static ModConfig getConfig() {
-        return config;
-    }
-
-    public static Screen getScreen(Screen parent) {
-        return AutoConfig.getConfigScreen(ModConfig.class, parent).get();
-    }
+    // 移除 getConfig() 方法，因为不再需要
+    // 移除 getScreen() 方法，因为配置屏幕由 NeoForge 处理
 }
