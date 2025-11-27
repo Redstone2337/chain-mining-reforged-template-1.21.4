@@ -1,6 +1,6 @@
 # A commands mod for fabric 1.21.4 minecraft.
 
- ![CurseForge Downloads](https://img.shields.io/curseforge/dt/7268194)  ![Modrinth Downloads](https://img.shields.io/modrinth/dt/TvEEJARF) 
+ ![CurseForge Downloads](https://img.shields.io/curseforge/dt/1226152)  ![Modrinth Downloads](https://img.shields.io/modrinth/dt/TvEEJARF) 
 
 ### General Section:
 1. **Added Commands**:
