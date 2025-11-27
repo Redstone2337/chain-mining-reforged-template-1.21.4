@@ -1,5 +1,7 @@
 # A commands mod for fabric 1.21.4 minecraft.
 
+ ![CurseForge Downloads](https://img.shields.io/curseforge/dt/7268194)  ![Modrinth Downloads](https://img.shields.io/modrinth/dt/TvEEJARF) 
+
 ### General Section:
 1. **Added Commands**:
    - `1) /chainmining or /cmr command, used to modify chain mining configurations.`
